@@ -7,7 +7,7 @@ Features
 -------------------
 - Basic outage listing.
 - Calendar view for outages.
-- Push notificitons for actual outages.
+- Push notifications for actual outages.
 - Reminder for planned outages.
 
 
