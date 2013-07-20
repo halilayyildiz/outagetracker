@@ -14,3 +14,12 @@ Features
 
 Development Stack
 -----------------------
+- **Client**
+ - iOS mobile application (ver 6+)
+
+- **Server Side**
+ - Java/JEE
+ - Amazon Micro Instance
+ - ...
+ - to be done :)
+
