@@ -12,8 +12,9 @@
 
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSString *location;
-@property (nonatomic, copy) NSDate *date;
+@property (nonatomic, copy) NSDate *startDate;
+@property (nonatomic, copy) NSDate *endDate;
 
--(id) initWithDesc:(NSString *) name location:(NSString *) location date:(NSDate *)date;
+-(id) initWithDesc:(NSString *) name location:(NSString *) location startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 @end

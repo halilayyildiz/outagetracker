@@ -48,12 +48,12 @@
     }
 }
 
-- (NSUInteger) getOutageCount
+- (NSUInteger) outageCountInList
 {
     return [self.outageList count];
 }
 
-- (OtOutage *) getOutageAtIndex:(NSUInteger)theIndex
+- (OtOutage *) objectInListAtIndex:(NSUInteger)theIndex
 {
     return [self.outageList objectAtIndex:theIndex];
 }

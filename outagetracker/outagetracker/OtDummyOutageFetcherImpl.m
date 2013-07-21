@@ -17,11 +17,11 @@
     
     OtOutage *outage1;
     NSDate *date1 = [NSDate date];
-    outage1 = [[OtOutage alloc] initWithDesc:@"Batikent Elektrik Kesintisi" location:@"Ankara,Batikent" date:date1];
+    outage1 = [[OtOutage alloc] initWithDesc:@"Batikent Elektrik Kesintisi" location:@"Ankara,Batikent" startDate:date1 endDate:date1];
     
     OtOutage *outage2;
     NSDate *date2 = [NSDate date];
-    outage2 = [[OtOutage alloc] initWithDesc:@"Dikmen Elektrik Kesintisi" location:@"Ankara,Dikmen" date:date2];
+    outage2 = [[OtOutage alloc] initWithDesc:@"Dikmen Elektrik Kesintisi" location:@"Ankara,Dikmen" startDate:date2 endDate:date2];
     
     [newOutageList addObject:outage1];
     [newOutageList addObject:outage2];

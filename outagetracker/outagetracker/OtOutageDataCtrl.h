@@ -14,8 +14,8 @@
 
 @property (nonatomic, copy) NSMutableArray *outageList;
 
-- (NSUInteger) getOutageCount;
-- (OtOutage *) getOutageAtIndex:(NSUInteger)index;
+- (NSUInteger) outageCountInList;
+- (OtOutage *) objectInListAtIndex:(NSUInteger)index;
 - (void) addOutage:(OtOutage *)outage;
 
 - (void) reloadOutages;
