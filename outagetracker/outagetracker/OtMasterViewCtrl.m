@@ -11,10 +11,6 @@
 #import "OtDetailViewCtrl.h"
 #import "OtOutageDataCtrl.h"
 
-@interface OtMasterViewCtrl ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
-@end
-
 @implementation OtMasterViewCtrl
 
 - (void)awakeFromNib
@@ -64,6 +60,11 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return NO;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -74,15 +75,17 @@
     }
 }
 
-- (IBAction)done:(UIStoryboardSegue *)segue
-{
-    // TODO
-}
-
-- (IBAction)cancel:(UIStoryboardSegue *)segue
-{
-    // TODO
-}
+//- (IBAction)done:(UIStoryboardSegue *)segue
+//{
+//    // TODO
+//}
+//
+//- (IBAction)cancel:(UIStoryboardSegue *)segue
+//{
+//    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
+//        [self dismissViewControllerAnimated:YES completion:NULL];
+//    }
+//}
 
 
 @end

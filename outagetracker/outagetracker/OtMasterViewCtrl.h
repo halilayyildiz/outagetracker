@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) OtOutageDataCtrl *dataController;
 
-- (IBAction)done:(UIStoryboardSegue *)segue;
-- (IBAction)cancel:(UIStoryboardSegue *)segue;
+//- (IBAction)done:(UIStoryboardSegue *)segue;
+//- (IBAction)cancel:(UIStoryboardSegue *)segue;
 
 @end
