@@ -11,6 +11,7 @@
 		A925DC0D179C432100C04F42 /* gear_48.png in Resources */ = {isa = PBXBuildFile; fileRef = A925DC0C179C432100C04F42 /* gear_48.png */; };
 		A925DC0F179C434000C04F42 /* gear_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A925DC0E179C434000C04F42 /* gear_24.png */; };
 		A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */; };
+		A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
 		A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D218179B36590018FB60 /* Foundation.framework */; };
 		A9F5D21B179B36590018FB60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D21A179B36590018FB60 /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 		A925DC0C179C432100C04F42 /* gear_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_48.png; sourceTree = "<group>"; };
 		A925DC0E179C434000C04F42 /* gear_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_24.png; sourceTree = "<group>"; };
 		A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
+		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D213179B36590018FB60 /* outagetracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = outagetracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5D216179B36590018FB60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9F5D218179B36590018FB60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -220,6 +223,8 @@
 				A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */,
 				A9F5D239179B36590018FB60 /* OtDetailViewCtrl.h */,
 				A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */,
+				A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */,
+				A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				A9F5D262179B62560018FB60 /* OtOutage.m in Sources */,
 				A9F5D269179B68310018FB60 /* OtOutageFetcherImpl.m in Sources */,
 				A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */,
+				A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

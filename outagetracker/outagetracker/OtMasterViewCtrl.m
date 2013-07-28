@@ -10,6 +10,7 @@
 #import "OtMasterViewCtrl.h"
 #import "OtDetailViewCtrl.h"
 #import "OtOutageDataCtrl.h"
+#import "OtSettingsViewCtrl.h"
 
 @implementation OtMasterViewCtrl
 
@@ -75,17 +76,35 @@
     }
 }
 
-//- (IBAction)done:(UIStoryboardSegue *)segue
-//{
-//    // TODO
-//}
-//
-//- (IBAction)cancel:(UIStoryboardSegue *)segue
-//{
-//    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-//        [self dismissViewControllerAnimated:YES completion:NULL];
-//    }
-//}
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"saveSettings"]) {
+        
+        OtSettingsViewCtrl *settingsCtrl = [segue sourceViewController];
+        if (settingsCtrl.installationId) {
+            // save installation id to user settings
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSString *installationIdValue = settingsCtrl.installationId.text;
+            [defaults setObject:installationIdValue forKey:@"installationId"];
+            [defaults synchronize];
+            NSLog(@"User settings are saved");
+            // reload data for possibly new installation id
+            
+            // TODO
+            
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (IBAction)cancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"cancelSettings"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
 
 
 @end
