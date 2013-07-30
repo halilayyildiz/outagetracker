@@ -18,7 +18,8 @@ Development Stack
  - iOS mobile application (ver 6+)
 
 - **Server Side**
- - Java/JEE
+ - Scala
+ - Play Framework 2.0
  - Amazon Micro Instance
  - ...
  - to be done :)
