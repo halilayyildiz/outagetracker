@@ -21,6 +21,6 @@ Development Stack
 - **Server Side**
  - Scala
  - Play Framework 2.0
- - Amazon Micro Instance
+ - Amazon EC2 Micro Instance (Ubuntu 12.04 LTS)
  - ..
 
