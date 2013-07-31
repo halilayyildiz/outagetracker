@@ -1,7 +1,7 @@
 Outage Tracker
 =============
 
-Mobile iOS appllication to track electricity outages.
+Mobile iOS application to track electricity outages.
 
 Features
 -------------------
@@ -15,12 +15,12 @@ Features
 Development Stack
 -----------------------
 - **Client**
- - iOS mobile application (ver 6+)
+ - iOS mobile application (iOS 6+)
+ - 
 
 - **Server Side**
  - Scala
  - Play Framework 2.0
  - Amazon Micro Instance
- - ...
- - to be done :)
+ - 
 
