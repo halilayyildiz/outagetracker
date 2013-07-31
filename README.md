@@ -16,11 +16,11 @@ Development Stack
 -----------------------
 - **Client**
  - iOS mobile application (iOS 6+)
- - 
+ - ..
 
 - **Server Side**
  - Scala
  - Play Framework 2.0
  - Amazon Micro Instance
- - 
+ - ..
 
