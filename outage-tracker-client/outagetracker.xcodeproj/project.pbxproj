@@ -22,7 +22,6 @@
 		A9F5D22B179B36590018FB60 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22A179B36590018FB60 /* Default.png */; };
 		A9F5D22D179B36590018FB60 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22C179B36590018FB60 /* Default@2x.png */; };
 		A9F5D22F179B36590018FB60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22E179B36590018FB60 /* Default-568h@2x.png */; };
-		A9F5D235179B36590018FB60 /* outagetracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D233179B36590018FB60 /* outagetracker.xcdatamodeld */; };
 		A9F5D238179B36590018FB60 /* OtMasterViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */; };
 		A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */; };
 		A9F5D243179B36590018FB60 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D242179B36590018FB60 /* SenTestingKit.framework */; };
@@ -68,7 +67,6 @@
 		A9F5D22A179B36590018FB60 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A9F5D22C179B36590018FB60 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A9F5D22E179B36590018FB60 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A9F5D234179B36590018FB60 /* outagetracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = outagetracker.xcdatamodel; sourceTree = "<group>"; };
 		A9F5D236179B36590018FB60 /* OtMasterViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtMasterViewCtrl.h; sourceTree = "<group>"; };
 		A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtMasterViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D239179B36590018FB60 /* OtDetailViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtDetailViewCtrl.h; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				A9F5D227179B36590018FB60 /* OtAppDelegate.h */,
 				A9F5D228179B36590018FB60 /* OtAppDelegate.m */,
 				A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */,
-				A9F5D233179B36590018FB60 /* outagetracker.xcdatamodeld */,
 				A9F5D21F179B36590018FB60 /* Supporting Files */,
 			);
 			path = outagetracker;
@@ -366,7 +363,6 @@
 			files = (
 				A9F5D225179B36590018FB60 /* main.m in Sources */,
 				A9F5D229179B36590018FB60 /* OtAppDelegate.m in Sources */,
-				A9F5D235179B36590018FB60 /* outagetracker.xcdatamodeld in Sources */,
 				A9F5D238179B36590018FB60 /* OtMasterViewCtrl.m in Sources */,
 				A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */,
 				A9F5D25F179B61810018FB60 /* OtOutageDataCtrl.m in Sources */,
@@ -558,19 +554,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A9F5D233179B36590018FB60 /* outagetracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A9F5D234179B36590018FB60 /* outagetracker.xcdatamodel */,
-			);
-			currentVersion = A9F5D234179B36590018FB60 /* outagetracker.xcdatamodel */;
-			path = outagetracker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A9F5D20B179B36590018FB60 /* Project object */;
 }
