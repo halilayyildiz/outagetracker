@@ -34,6 +34,8 @@
 		A9F5D262179B62560018FB60 /* OtOutage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D261179B62560018FB60 /* OtOutage.m */; };
 		A9F5D269179B68310018FB60 /* OtOutageFetcherImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D268179B68310018FB60 /* OtOutageFetcherImpl.m */; };
 		A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */; };
+		A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2317ACA645009F63D7 /* app-icon.png */; };
+		A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,7 @@
 		A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
 		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
-		A9F5D213179B36590018FB60 /* outagetracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = outagetracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5D216179B36590018FB60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9F5D218179B36590018FB60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9F5D21A179B36590018FB60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,8 @@
 		A9F5D26A179B69620018FB60 /* OtOutageFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcher.h; sourceTree = "<group>"; };
 		A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcherImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtDummyOutageFetcherImpl.h; sourceTree = "<group>"; };
 		A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageFetcherImpl.m; sourceTree = "<group>"; };
+		A9FA1A2317ACA645009F63D7 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "../app-icon.png"; sourceTree = "<group>"; };
+		A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-retina.png"; path = "../app-icon-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 		A925DC09179C423B00C04F42 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */,
+				A9FA1A2317ACA645009F63D7 /* app-icon.png */,
 				A925DC0E179C434000C04F42 /* gear_24.png */,
 				A925DC0C179C432100C04F42 /* gear_48.png */,
 				A925DC0A179C429F00C04F42 /* gear_64.png */,
@@ -137,7 +143,7 @@
 		A9F5D214179B36590018FB60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9F5D213179B36590018FB60 /* outagetracker.app */,
+				A9F5D213179B36590018FB60 /* Outages.app */,
 				A9F5D241179B36590018FB60 /* outagetrackerTests.octest */,
 			);
 			name = Products;
@@ -264,7 +270,7 @@
 			);
 			name = outagetracker;
 			productName = outagetracker;
-			productReference = A9F5D213179B36590018FB60 /* outagetracker.app */;
+			productReference = A9F5D213179B36590018FB60 /* Outages.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A9F5D240179B36590018FB60 /* outagetrackerTests */ = {
@@ -327,6 +333,8 @@
 				A925DC0D179C432100C04F42 /* gear_48.png in Resources */,
 				A925DC0F179C434000C04F42 /* gear_24.png in Resources */,
 				A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */,
+				A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */,
+				A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +481,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Outages;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -484,7 +492,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Outages;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
