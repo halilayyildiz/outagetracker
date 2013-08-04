@@ -13,6 +13,8 @@
 
 - (NSMutableArray *) getOutages {
     
+    static int counter = 1;
+    
     NSMutableArray *newOutageList = [[NSMutableArray alloc] init];
 
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
@@ -30,9 +32,16 @@
     outage2 = [[OtOutage alloc] initWithDesc:@"Dikmen Elektrik Kesintisi" location:@"Ankara,Dikmen" startDate:startDate2 endDate:endDate2 address:@"Dikmen, Ankara"];
     [outage2 setNumOfAffectedCustomers:2508];
     
-    [newOutageList addObject:outage1];
-    [newOutageList addObject:outage2];
+    
+    for (int i=0; i<counter; i++) {
+        if(i%2){
+            [newOutageList addObject:outage1];
+        }else{
+            [newOutageList addObject:outage2];
+        }
+    }
 
+    counter++;
     return newOutageList;
 }
 

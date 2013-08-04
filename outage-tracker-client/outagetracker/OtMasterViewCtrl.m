@@ -28,6 +28,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     self.tableView.separatorColor = UIColorFromRGB(BGCOLOR);
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor whiteColor];
+    [refreshControl addTarget:self action:@selector(refreshViewData) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +82,18 @@
 {
     // Return NO if you do not want the specified item to be editable.
     return NO;
+}
+
+- (void)refreshViewData
+{
+    [self.dataController reloadOutages];
+    [self performSelector:@selector(updateTable) withObject:nil afterDelay:1];
+}
+
+- (void)updateTable
+{
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

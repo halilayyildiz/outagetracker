@@ -14,7 +14,7 @@
 @interface OtOutageDataCtrl()
 
 @property () id<OtOutageFetcher> outageFetcher;
-- (void)initializeDefaultDataList;
+- (void)loadOutages;
 
 @end
 
@@ -25,17 +25,20 @@
 {
     if (self = [super init])
     {
-        [self initializeDefaultDataList];
+        [self loadOutages];
         return self;
     }
     return nil;
 }
 
--(void) initializeDefaultDataList
-{
-    self.outageFetcher = [[OtDummyOutageFetcherImpl alloc] init];
-    self.outageList = [[NSMutableArray alloc] init];
+-(void) loadOutages
+{    
+    if(self.outageFetcher == nil)
+    {
+        self.outageFetcher = [[OtDummyOutageFetcherImpl alloc] init];
+    }
     
+    self.outageList = [[NSMutableArray alloc] init];
     NSMutableArray *outages = [self.outageFetcher getOutages];
     for (OtOutage *outage in outages) {
         [self.outageList addObject:outage];
@@ -64,10 +67,9 @@
     [self.outageList addObject:outage];
 }
 
--(void) reloadOutages {
-
-    // TODO
-
+-(void) reloadOutages
+{
+    [self loadOutages];
 }
 
 @end
