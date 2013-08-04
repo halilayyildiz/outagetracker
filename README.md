@@ -16,6 +16,7 @@ Development Stack
 -----------------------
 - **Client**
  - iOS mobile application (iOS 6+)
+ - Xcode, Objective-C
  - ..
 
 - **Server Side**
