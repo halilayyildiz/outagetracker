@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import "OtUtils.h"
 #import "OtDetailViewCtrl.h"
 #import "OtOutage.h"
 
@@ -42,10 +43,12 @@
     }
     
     if (theOutage) {
-        self.descLabel.text = theOutage.desc;
+        self.descLabel.text = theOutage.description;
+        self.startDateLabel.text = [OtUtils formatDate:theOutage.startDate];
+        self.endDateLabel.text = [OtUtils formatDate:theOutage.endDate];
+        self.durationLabel.text = [OtUtils durationBetweenDate:theOutage.startDate andDate:theOutage.endDate];
+        self.numOfAffCustomers.text = [NSString stringWithFormat:@"%d", theOutage.numOfAffectedCustomers];
         self.locationLabel.text = theOutage.location;
-        self.startDateLabel.text = [formatter stringFromDate:(NSDate *)theOutage.startDate];
-        self.endDateLabel.text = [formatter stringFromDate:(NSDate *)theOutage.endDate];
     }
 }
 

@@ -10,13 +10,15 @@
 
 @class OtOutage;
 
-@interface OtDetailViewCtrl : UIViewController
+@interface OtDetailViewCtrl : UITableViewController
 
 @property (strong, nonatomic) OtOutage *outage;
 
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numOfAffCustomers;
 
 @end

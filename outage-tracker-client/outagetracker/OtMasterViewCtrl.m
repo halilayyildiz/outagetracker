@@ -11,17 +11,23 @@
 #import "OtDetailViewCtrl.h"
 #import "OtOutageDataCtrl.h"
 #import "OtSettingsViewCtrl.h"
+#import "OtUtils.h"
+#import "OtMasterViewOutageCell.h"
+
 
 @implementation OtMasterViewCtrl
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.dataController = [[OtOutageDataCtrl alloc] init];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    self.tableView.separatorColor = UIColorFromRGB(BGCOLOR);
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,11 +58,17 @@
         formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    OtMasterViewOutageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     OtOutage *outageAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
-    [[cell textLabel] setText:outageAtIndex.description];
-    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *) outageAtIndex.startDate]];
+    [[cell description] setText:outageAtIndex.description];
+    [[cell startDate] setText:[OtUtils formatDate:outageAtIndex.startDate]];
+    [[cell duration] setText:[OtUtils durationBetweenDate:outageAtIndex.startDate andDate:outageAtIndex.endDate]];
+    [[cell numOfAffectedCustomers] setText:[NSString stringWithFormat:@"%d", outageAtIndex.numOfAffectedCustomers]];
+    
+//    cell.contentView.backgroundColor = UIColorFromRGB(0xFFFFFF);
+    
     
     return cell;
 }

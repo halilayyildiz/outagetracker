@@ -10,11 +10,13 @@
 
 @interface OtOutage : NSObject
 
-@property (nonatomic, copy) NSString *desc;
+@property (nonatomic, copy) NSString *description;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSDate *startDate;
 @property (nonatomic, copy) NSDate *endDate;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, assign) NSInteger numOfAffectedCustomers;
 
--(id) initWithDesc:(NSString *) name location:(NSString *) location startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
+-(id) initWithDesc:(NSString *) desc location:(NSString *) location startDate:(NSDate *)startDate endDate:(NSDate *)endDate address:(NSString *)addresss;
 
 @end

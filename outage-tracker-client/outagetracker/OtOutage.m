@@ -10,15 +10,16 @@
 
 @implementation OtOutage
 
--(id) initWithDesc:(NSString *)desc location:(NSString *)location startDate:(NSDate *)startDate endDate:(NSDate *)endDate
+-(id) initWithDesc:(NSString *)description location:(NSString *)location startDate:(NSDate *)startDate endDate:(NSDate *)endDate address:(NSString *)addresss
 {
     self = [super init];
     
     if (self) {
-        _desc = desc;
+        _description = description;
         _location = location;
         _startDate = startDate;
         _endDate = endDate;
+        _address = addresss;
         return self;
     }
     return nil;

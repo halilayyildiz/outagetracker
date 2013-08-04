@@ -36,7 +36,8 @@
     self.outageFetcher = [[OtDummyOutageFetcherImpl alloc] init];
     self.outageList = [[NSMutableArray alloc] init];
     
-    for (OtOutage *outage in [self.outageFetcher getOutages]) {
+    NSMutableArray *outages = [self.outageFetcher getOutages];
+    for (OtOutage *outage in outages) {
         [self.outageList addObject:outage];
     }
 }

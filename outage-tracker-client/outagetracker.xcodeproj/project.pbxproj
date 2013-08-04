@@ -36,6 +36,8 @@
 		A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */; };
 		A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2317ACA645009F63D7 /* app-icon.png */; };
 		A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */; };
+		A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2917ADAE56009F63D7 /* OtUtils.m */; };
+		A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,10 @@
 		A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageFetcherImpl.m; sourceTree = "<group>"; };
 		A9FA1A2317ACA645009F63D7 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "../app-icon.png"; sourceTree = "<group>"; };
 		A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-retina.png"; path = "../app-icon-retina.png"; sourceTree = "<group>"; };
+		A9FA1A2817ADAE56009F63D7 /* OtUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtUtils.h; sourceTree = "<group>"; };
+		A9FA1A2917ADAE56009F63D7 /* OtUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtUtils.m; sourceTree = "<group>"; };
+		A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtMasterViewOutageCell.h; sourceTree = "<group>"; };
+		A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtMasterViewOutageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		A9F5D21E179B36590018FB60 /* outagetracker */ = {
 			isa = PBXGroup;
 			children = (
+				A9FA1A2717ADAE33009F63D7 /* utils */,
 				A9F5D266179B68140018FB60 /* remote */,
 				A9F5D265179B629F0018FB60 /* controller */,
 				A9F5D264179B62970018FB60 /* view */,
@@ -228,6 +235,8 @@
 				A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */,
 				A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */,
 				A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */,
+				A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */,
+				A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -251,6 +260,15 @@
 				A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */,
 			);
 			name = remote;
+			sourceTree = "<group>";
+		};
+		A9FA1A2717ADAE33009F63D7 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9FA1A2817ADAE56009F63D7 /* OtUtils.h */,
+				A9FA1A2917ADAE56009F63D7 /* OtUtils.m */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +396,8 @@
 				A9F5D269179B68310018FB60 /* OtOutageFetcherImpl.m in Sources */,
 				A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */,
 				A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */,
+				A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */,
+				A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

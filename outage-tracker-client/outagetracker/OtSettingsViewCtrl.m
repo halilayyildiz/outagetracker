@@ -7,6 +7,7 @@
 //
 
 #import "OtSettingsViewCtrl.h"
+#import "OtUtils.h"
 
 @interface OtSettingsViewCtrl ()
 
@@ -27,6 +28,9 @@
 {
     [super viewDidLoad];
     
+    // set styles
+    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    
     // load user settings
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *instId = [defaults valueForKey:@"installationId"];
@@ -44,6 +48,7 @@
 - (IBAction)hideKeyboard:(id)sender forEvent:(UIEvent *)event {
     
     // TODO
+    NSLog(@"hide keyboard..");
     
 }
 @end
