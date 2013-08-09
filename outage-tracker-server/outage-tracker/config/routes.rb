@@ -1,12 +1,16 @@
 OutageTracker::Application.routes.draw do
-  get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resource :outages
+
+  resources :outage
+
+  namespace :api do
+    resources :outage, :defaults => {format: 'json'}
+  end
 
 
   # Example of regular route:
@@ -43,7 +47,7 @@ OutageTracker::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

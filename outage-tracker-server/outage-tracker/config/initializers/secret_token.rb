@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-OutageTracker::Application.config.secret_key_base = 'd63394b3eff3fe7c622c5192b82b6a04fecf32e4dfd8cedab51f373c3a70e05eada8144f61b116f73a4e51ef013443be38626d8de5be6a1fb652d74f0c976508'
+OutageTracker::Application.config.secret_key_base = 'a3cc99646f027c05d57bc045fd56585e8a55bf98828d3cd9244a149e2ce8d78f100f4af7aff286a62087b3c195431298665a951d4f7b09803323b6d96b3e605c'

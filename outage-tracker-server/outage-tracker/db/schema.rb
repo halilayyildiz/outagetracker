@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130808143350) do
+ActiveRecord::Schema.define(version: 20130809212041) do
 
-  create_table "outages", force: true do |t|
-    t.string   "title"
-    t.text     "text"
+  create_table "outage", force: true do |t|
+    t.string   "outage_id"
+    t.string   "description"
+    t.string   "location"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string   "address"
+    t.integer  "affected_customers"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
