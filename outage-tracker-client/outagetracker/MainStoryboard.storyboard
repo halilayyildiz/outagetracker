@@ -468,6 +468,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="appVersion" destination="ibU-B7-neC" id="qOX-sy-T8c"/>
                         <outlet property="installationId" destination="blo-Be-iIl" id="d8g-7Z-JOr"/>
                     </connections>
                 </tableViewController>
@@ -531,6 +532,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtSettingsViewCtrl.h"/>
             <relationships>
                 <relationship kind="action" name="hideKeyboard:forEvent:"/>
+                <relationship kind="outlet" name="appVersion" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="installationId" candidateClass="UITextField"/>
             </relationships>
         </class>

@@ -35,7 +35,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *instId = [defaults valueForKey:@"installationId"];
     self.installationId.text = instId;
-    NSLog(@"User settings loaded.");
+    
+    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
+    self.appVersion.text = [infoDict objectForKey:@"CFBundleVersion"];
 }
 
 - (void)didReceiveMemoryWarning

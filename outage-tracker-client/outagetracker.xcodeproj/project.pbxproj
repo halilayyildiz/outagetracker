@@ -10,6 +10,11 @@
 		A925DC0B179C429F00C04F42 /* gear_64.png in Resources */ = {isa = PBXBuildFile; fileRef = A925DC0A179C429F00C04F42 /* gear_64.png */; };
 		A925DC0D179C432100C04F42 /* gear_48.png in Resources */ = {isa = PBXBuildFile; fileRef = A925DC0C179C432100C04F42 /* gear_48.png */; };
 		A925DC0F179C434000C04F42 /* gear_24.png in Resources */ = {isa = PBXBuildFile; fileRef = A925DC0E179C434000C04F42 /* gear_24.png */; };
+		A93A444617B532FE00787AC7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444517B532FD00787AC7 /* Default-568h@2x.png */; };
+		A93A444817B5347300787AC7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444717B5347300787AC7 /* Default@2x.png */; };
+		A93A444A17B5347D00787AC7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444917B5347D00787AC7 /* Default.png */; };
+		A93A444C17B53B6300787AC7 /* ot-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444B17B53B6300787AC7 /* ot-icon-retina.png */; };
+		A93A444E17B53B6D00787AC7 /* ot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444D17B53B6D00787AC7 /* ot-icon.png */; };
 		A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */; };
 		A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
@@ -19,9 +24,6 @@
 		A9F5D223179B36590018FB60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D221179B36590018FB60 /* InfoPlist.strings */; };
 		A9F5D225179B36590018FB60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D224179B36590018FB60 /* main.m */; };
 		A9F5D229179B36590018FB60 /* OtAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D228179B36590018FB60 /* OtAppDelegate.m */; };
-		A9F5D22B179B36590018FB60 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22A179B36590018FB60 /* Default.png */; };
-		A9F5D22D179B36590018FB60 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22C179B36590018FB60 /* Default@2x.png */; };
-		A9F5D22F179B36590018FB60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D22E179B36590018FB60 /* Default-568h@2x.png */; };
 		A9F5D238179B36590018FB60 /* OtMasterViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */; };
 		A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */; };
 		A9F5D243179B36590018FB60 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D242179B36590018FB60 /* SenTestingKit.framework */; };
@@ -54,6 +56,11 @@
 		A925DC0A179C429F00C04F42 /* gear_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_64.png; sourceTree = "<group>"; };
 		A925DC0C179C432100C04F42 /* gear_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_48.png; sourceTree = "<group>"; };
 		A925DC0E179C434000C04F42 /* gear_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_24.png; sourceTree = "<group>"; };
+		A93A444517B532FD00787AC7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		A93A444717B5347300787AC7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		A93A444917B5347D00787AC7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		A93A444B17B53B6300787AC7 /* ot-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon-retina.png"; path = "../ot-icon-retina.png"; sourceTree = "<group>"; };
+		A93A444D17B53B6D00787AC7 /* ot-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon.png"; path = "../ot-icon.png"; sourceTree = "<group>"; };
 		A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
 		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
@@ -68,9 +75,6 @@
 		A9F5D226179B36590018FB60 /* outagetracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "outagetracker-Prefix.pch"; sourceTree = "<group>"; };
 		A9F5D227179B36590018FB60 /* OtAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtAppDelegate.h; sourceTree = "<group>"; };
 		A9F5D228179B36590018FB60 /* OtAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtAppDelegate.m; sourceTree = "<group>"; };
-		A9F5D22A179B36590018FB60 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A9F5D22C179B36590018FB60 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A9F5D22E179B36590018FB60 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A9F5D236179B36590018FB60 /* OtMasterViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtMasterViewCtrl.h; sourceTree = "<group>"; };
 		A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtMasterViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D239179B36590018FB60 /* OtDetailViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtDetailViewCtrl.h; sourceTree = "<group>"; };
@@ -191,9 +195,11 @@
 				A9F5D221179B36590018FB60 /* InfoPlist.strings */,
 				A9F5D224179B36590018FB60 /* main.m */,
 				A9F5D226179B36590018FB60 /* outagetracker-Prefix.pch */,
-				A9F5D22A179B36590018FB60 /* Default.png */,
-				A9F5D22C179B36590018FB60 /* Default@2x.png */,
-				A9F5D22E179B36590018FB60 /* Default-568h@2x.png */,
+				A93A444D17B53B6D00787AC7 /* ot-icon.png */,
+				A93A444B17B53B6300787AC7 /* ot-icon-retina.png */,
+				A93A444917B5347D00787AC7 /* Default.png */,
+				A93A444717B5347300787AC7 /* Default@2x.png */,
+				A93A444517B532FD00787AC7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -344,15 +350,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F5D223179B36590018FB60 /* InfoPlist.strings in Resources */,
-				A9F5D22B179B36590018FB60 /* Default.png in Resources */,
-				A9F5D22D179B36590018FB60 /* Default@2x.png in Resources */,
-				A9F5D22F179B36590018FB60 /* Default-568h@2x.png in Resources */,
 				A925DC0B179C429F00C04F42 /* gear_64.png in Resources */,
 				A925DC0D179C432100C04F42 /* gear_48.png in Resources */,
 				A925DC0F179C434000C04F42 /* gear_24.png in Resources */,
 				A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */,
 				A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */,
 				A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */,
+				A93A444617B532FE00787AC7 /* Default-568h@2x.png in Resources */,
+				A93A444817B5347300787AC7 /* Default@2x.png in Resources */,
+				A93A444A17B5347D00787AC7 /* Default.png in Resources */,
+				A93A444C17B53B6300787AC7 /* ot-icon-retina.png in Resources */,
+				A93A444E17B53B6D00787AC7 /* ot-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
