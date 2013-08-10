@@ -1,5 +1,7 @@
 class Api::OutagesController < ApplicationController
 
+  skip_before_filter :verify_authenticity_token
+
   def fetch_outage
     @outages = Outage.find_by_id(params[:id])
   end

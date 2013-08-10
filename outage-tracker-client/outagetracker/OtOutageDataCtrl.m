@@ -8,13 +8,13 @@
 
 #import "OtOutage.h"
 #import "OtOutageDataCtrl.h"
-#import "OtOutageFetcher.h"
-#import "OtDummyOutageFetcher.h"
+#import "OtOutageClient.h"
+#import "OtDummyOutageClient.h"
 
 
 @interface OtOutageDataCtrl()
 
-@property () id<OtOutageFetcherProtocol> outageFetcher;
+@property () id<OtOutageClientProtocol> outageClient;
 
 @end
 
@@ -25,6 +25,10 @@
 {
     if (self = [super init])
     {
+        if(self.outageClient == nil)
+        {
+            self.outageClient = [[OtOutageClient alloc] init];
+        }
         return self;
     }
     return nil;
@@ -55,13 +59,8 @@
 
 - (void) reloadOutagesAndNotify:(void (^) (void))onComplete
 {
-    if(self.outageFetcher == nil)
-    {
-        self.outageFetcher = [[OtOutageFetcher alloc] init];
-    }
-    
     self.outageList = [[NSMutableArray alloc] init];
-    [self.outageFetcher getOutages:^(NSMutableArray *outages) {
+    [self.outageClient getOutages:^(NSMutableArray *outages) {
         for (OtOutage *outage in outages) {
             [self.outageList addObject:outage];
         }

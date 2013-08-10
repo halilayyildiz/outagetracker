@@ -10,6 +10,7 @@
 
 @interface OtSettingsViewCtrl : UITableViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *userId;
 @property (strong, nonatomic) IBOutlet UITextField *installationId;
 @property (strong, nonatomic) IBOutlet UITextField *appVersion;
 

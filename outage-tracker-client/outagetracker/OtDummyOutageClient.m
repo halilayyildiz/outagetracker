@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtDummyOutageFetcher.h"
+#import "OtDummyOutageClient.h"
 #import "OtOutage.h"
 
-@implementation OtDummyOutageFetcher
+@implementation OtDummyOutageClient
 
 - (void) getOutages:(void (^)(NSMutableArray *outages))onCompleteSend
 {
@@ -44,6 +44,15 @@
     counter++;
     
     onCompleteSend(newOutageList);
+}
+
+- (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete;
+{
+    //TODO
+    
+    
+    
+    
 }
 
 @end

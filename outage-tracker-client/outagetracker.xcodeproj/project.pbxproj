@@ -29,6 +29,8 @@
 		A9A95CD317B5D898005F557D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD217B5D898005F557D /* MobileCoreServices.framework */; };
 		A9A95CD517B5D8A7005F557D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */; };
 		A9A95CD717B5D921005F557D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD617B5D921005F557D /* Security.framework */; };
+		A9B790B017B6F30000197731 /* ot-bill-example.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B790AF17B6F30000197731 /* ot-bill-example.png */; };
+		A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
 		A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D218179B36590018FB60 /* Foundation.framework */; };
 		A9F5D21B179B36590018FB60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D21A179B36590018FB60 /* CoreGraphics.framework */; };
@@ -46,8 +48,8 @@
 		A9F5D251179B36590018FB60 /* outagetrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D250179B36590018FB60 /* outagetrackerTests.m */; };
 		A9F5D25F179B61810018FB60 /* OtOutageDataCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D25E179B61810018FB60 /* OtOutageDataCtrl.m */; };
 		A9F5D262179B62560018FB60 /* OtOutage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D261179B62560018FB60 /* OtOutage.m */; };
-		A9F5D269179B68310018FB60 /* OtOutageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D268179B68310018FB60 /* OtOutageFetcher.m */; };
-		A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */; };
+		A9F5D269179B68310018FB60 /* OtOutageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D268179B68310018FB60 /* OtOutageClient.m */; };
+		A9F5D26D179B697F0018FB60 /* OtDummyOutageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageClient.m */; };
 		A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2917ADAE56009F63D7 /* OtUtils.m */; };
 		A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */; };
 /* End PBXBuildFile section */
@@ -97,7 +99,10 @@
 		A9A95CD217B5D898005F557D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A9A95CD617B5D921005F557D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A9A95CD817B5E61B005F557D /* OtOutageFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcherProtocol.h; sourceTree = "<group>"; };
+		A9A95CD817B5E61B005F557D /* OtOutageClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageClientProtocol.h; sourceTree = "<group>"; };
+		A9B790AF17B6F30000197731 /* ot-bill-example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ot-bill-example.png"; sourceTree = "<group>"; };
+		A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtWelcomeViewCtrl.h; sourceTree = "<group>"; };
+		A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtWelcomeViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5D216179B36590018FB60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9F5D218179B36590018FB60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,10 +128,10 @@
 		A9F5D25E179B61810018FB60 /* OtOutageDataCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageDataCtrl.m; sourceTree = "<group>"; };
 		A9F5D260179B62560018FB60 /* OtOutage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutage.h; sourceTree = "<group>"; };
 		A9F5D261179B62560018FB60 /* OtOutage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutage.m; sourceTree = "<group>"; };
-		A9F5D267179B68310018FB60 /* OtOutageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcher.h; sourceTree = "<group>"; };
-		A9F5D268179B68310018FB60 /* OtOutageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageFetcher.m; sourceTree = "<group>"; };
-		A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtDummyOutageFetcher.h; sourceTree = "<group>"; };
-		A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageFetcher.m; sourceTree = "<group>"; };
+		A9F5D267179B68310018FB60 /* OtOutageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutageClient.h; sourceTree = "<group>"; };
+		A9F5D268179B68310018FB60 /* OtOutageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageClient.m; sourceTree = "<group>"; };
+		A9F5D26B179B697F0018FB60 /* OtDummyOutageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtDummyOutageClient.h; sourceTree = "<group>"; };
+		A9F5D26C179B697F0018FB60 /* OtDummyOutageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageClient.m; sourceTree = "<group>"; };
 		A9FA1A2817ADAE56009F63D7 /* OtUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtUtils.h; sourceTree = "<group>"; };
 		A9FA1A2917ADAE56009F63D7 /* OtUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtUtils.m; sourceTree = "<group>"; };
 		A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtMasterViewOutageCell.h; sourceTree = "<group>"; };
@@ -165,6 +170,7 @@
 		A925DC09179C423B00C04F42 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A9B790AF17B6F30000197731 /* ot-bill-example.png */,
 				A93A444D17B53B6D00787AC7 /* ot-icon.png */,
 				A93A444B17B53B6300787AC7 /* ot-icon-retina.png */,
 				A925DC0E179C434000C04F42 /* gear_24.png */,
@@ -305,6 +311,8 @@
 				A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */,
 				A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */,
 				A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */,
+				A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */,
+				A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -321,11 +329,11 @@
 		A9F5D266179B68140018FB60 /* remote */ = {
 			isa = PBXGroup;
 			children = (
-				A9F5D267179B68310018FB60 /* OtOutageFetcher.h */,
-				A9F5D268179B68310018FB60 /* OtOutageFetcher.m */,
-				A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcher.h */,
-				A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */,
-				A9A95CD817B5E61B005F557D /* OtOutageFetcherProtocol.h */,
+				A9F5D267179B68310018FB60 /* OtOutageClient.h */,
+				A9F5D268179B68310018FB60 /* OtOutageClient.m */,
+				A9F5D26B179B697F0018FB60 /* OtDummyOutageClient.h */,
+				A9F5D26C179B697F0018FB60 /* OtDummyOutageClient.m */,
+				A9A95CD817B5E61B005F557D /* OtOutageClientProtocol.h */,
 			);
 			name = remote;
 			sourceTree = "<group>";
@@ -422,6 +430,7 @@
 				A93A444A17B5347D00787AC7 /* Default.png in Resources */,
 				A9A95C9617B5B9D3005F557D /* ot-icon-retina.png in Resources */,
 				A9A95C9717B5B9D7005F557D /* ot-icon.png in Resources */,
+				A9B790B017B6F30000197731 /* ot-bill-example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,8 +471,8 @@
 				A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */,
 				A9F5D25F179B61810018FB60 /* OtOutageDataCtrl.m in Sources */,
 				A9F5D262179B62560018FB60 /* OtOutage.m in Sources */,
-				A9F5D269179B68310018FB60 /* OtOutageFetcher.m in Sources */,
-				A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcher.m in Sources */,
+				A9F5D269179B68310018FB60 /* OtOutageClient.m in Sources */,
+				A9F5D26D179B697F0018FB60 /* OtDummyOutageClient.m in Sources */,
 				A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */,
 				A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */,
 				A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */,
@@ -476,6 +485,7 @@
 				A9A95CCF17B5C5EC005F557D /* AFURLConnectionOperation.m in Sources */,
 				A9A95CD017B5C5EC005F557D /* AFXMLRequestOperation.m in Sources */,
 				A9A95CD117B5C5EC005F557D /* UIImageView+AFNetworking.m in Sources */,
+				A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

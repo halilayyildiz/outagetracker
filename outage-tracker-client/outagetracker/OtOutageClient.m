@@ -8,21 +8,22 @@
 
 #import "OtUtils.h"
 #import "OtOutage.h"
-#import "OtOutageFetcher.h"
+#import "OtOutageClient.h"
 #import "AFNetworking.h"
 
-@interface OtOutageFetcher()
+@interface OtOutageClient()
 
--(NSMutableArray *)parseOutage:(NSArray *)outagesJson;
+-(NSMutableArray *)parseOutage:(NSArray *)outagesJSON;
+- (NSString *)parseUserId:(NSDictionary *)userJSON;
 
 @end
 
-@implementation OtOutageFetcher
+@implementation OtOutageClient
 
 - (void) getOutages:(void (^)(NSMutableArray *outages))onCompleteSend {
     
     // prepare url string
-    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", serverHost, serverPort, apiGetAllOutages];
+    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_ALL_OUTAGES_PATH];
     
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -46,11 +47,37 @@
     [operation start];
 }
 
-- (NSMutableArray *)parseOutage:(NSArray *)outagesJson
+- (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete;
+{
+    // prepare url string
+    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_REGISTER_USER_PATH];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSDictionary *params = @{API_REGISTER_USER_PARAM_INST: installationId};
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:urlStr parameters:params];
+    
+    AFJSONRequestOperation *operation =
+        [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+             success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+             {
+                 NSString *userId = [self parseUserId:JSON];
+                 onComplete(userId);
+             }
+             failure:^(NSURLRequest *request , NSURLResponse *response , NSError *error , id JSON)
+             {
+                 NSLog(@"User Registration Failed: %@",[error localizedDescription]);
+                  onComplete(nil);
+             }];
+    
+    [operation start];
+}
+
+- (NSMutableArray *)parseOutage:(NSArray *)outagesJSON
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
-    for(NSDictionary *outageJson in outagesJson)
+    for(NSDictionary *outageJson in outagesJSON)
     {
         OtOutage *outage = [[OtOutage alloc] init];
         
@@ -65,6 +92,12 @@
     }
     
     return result;
+}
+
+- (NSString *)parseUserId:(NSDictionary *)userJSON
+{
+    NSInteger userId = [userJSON[@"id"] integerValue];
+    return [NSString stringWithFormat:@"%d", userId];
 }
 
 @end

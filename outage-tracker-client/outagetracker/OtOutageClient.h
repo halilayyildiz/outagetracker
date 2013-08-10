@@ -1,5 +1,5 @@
 //
-//  OtDummyOutageFetcherImpl.h
+//  OtOutageFetcher.h
 //  outagetracker
 //
 //  Created by Halil AYYILDIZ on 7/21/13.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OtOutageFetcherProtocol.h"
+#import "OtOutageClientProtocol.h"
 
-@interface OtDummyOutageFetcher : NSObject <OtOutageFetcherProtocol>
+@interface OtOutageClient : NSObject <OtOutageClientProtocol>
 
 @end

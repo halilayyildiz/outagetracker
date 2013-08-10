@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810134338) do
+ActiveRecord::Schema.define(version: 20130810224340) do
 
   create_table "outage", force: true do |t|
     t.string   "outage_id"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20130810134338) do
   end
 
   create_table "user", force: true do |t|
-    t.string   "device_id"
     t.string   "installation_id"
+    t.string   "push_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol OtOutageFetcherProtocol <NSObject>
+@protocol OtOutageClientProtocol <NSObject>
 
 - (void) getOutages:(void (^)(NSMutableArray *outages))onCompleteSend;
+
+- (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete;
 
 @end

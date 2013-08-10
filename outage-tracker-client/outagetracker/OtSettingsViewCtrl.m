@@ -33,7 +33,10 @@
     
     // load user settings
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *instId = [defaults valueForKey:@"installationId"];
+    
+    NSString *userId = [defaults valueForKey:OT_USER_ID];
+    self.userId.text = userId;
+    NSString *instId = [defaults valueForKey:OT_INST_ID];
     self.installationId.text = instId;
     
     NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];

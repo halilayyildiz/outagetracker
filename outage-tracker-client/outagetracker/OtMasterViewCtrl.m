@@ -26,8 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
+    
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-    self.tableView.separatorColor = UIColorFromRGB(BGCOLOR);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.tintColor = [UIColor whiteColor];
@@ -118,7 +119,7 @@
             
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSString *installationIdValue = settingsCtrl.installationId.text;
-            [defaults setObject:installationIdValue forKey:@"installationId"];
+            [defaults setObject:installationIdValue forKey:OT_INST_ID];
             [defaults synchronize];
             NSLog(@"User settings are saved");
             // reload data for possibly new installation id
