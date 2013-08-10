@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130810134338) do
 
-  create_table "Outages", force: true do |t|
+  create_table "outage", force: true do |t|
     t.string   "outage_id"
     t.string   "description"
     t.string   "location"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20130810134338) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "user", force: true do |t|
     t.string   "device_id"
     t.string   "installation_id"
     t.datetime "created_at"
