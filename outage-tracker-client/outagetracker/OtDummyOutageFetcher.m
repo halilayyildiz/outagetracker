@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtDummyOutageFetcherImpl.h"
+#import "OtDummyOutageFetcher.h"
 #import "OtOutage.h"
 
-@implementation OtDummyOutageFetcherImpl
+@implementation OtDummyOutageFetcher
 
-- (NSMutableArray *) getOutages {
-    
+- (void) getOutages:(void (^)(NSMutableArray *outages))onCompleteSend
+{
     static int counter = 1;
     
     NSMutableArray *newOutageList = [[NSMutableArray alloc] init];
@@ -42,7 +42,8 @@
     }
 
     counter++;
-    return newOutageList;
+    
+    onCompleteSend(newOutageList);
 }
 
 @end

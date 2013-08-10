@@ -18,6 +18,6 @@
 - (OtOutage *) objectInListAtIndex:(NSUInteger)index;
 - (void) addOutage:(OtOutage *)outage;
 
-- (void) reloadOutages;
+- (void) reloadOutagesAndNotify:(void (^) (void))onComplete;
 
 @end

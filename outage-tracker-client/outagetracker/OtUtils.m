@@ -36,4 +36,16 @@
     return [formatter stringFromDate:date];
 }
 
++ (NSDate *)parseDateTime:(NSString *) dateString
+{
+    static NSDateFormatter *formatter = nil;
+    
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    }
+    
+    return [formatter dateFromString:dateString];
+}
+
 @end

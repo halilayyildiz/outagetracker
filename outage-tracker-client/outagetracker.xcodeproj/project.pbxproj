@@ -13,10 +13,22 @@
 		A93A444617B532FE00787AC7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444517B532FD00787AC7 /* Default-568h@2x.png */; };
 		A93A444817B5347300787AC7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444717B5347300787AC7 /* Default@2x.png */; };
 		A93A444A17B5347D00787AC7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444917B5347D00787AC7 /* Default.png */; };
-		A93A444C17B53B6300787AC7 /* ot-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444B17B53B6300787AC7 /* ot-icon-retina.png */; };
-		A93A444E17B53B6D00787AC7 /* ot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444D17B53B6D00787AC7 /* ot-icon.png */; };
 		A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */; };
 		A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */; };
+		A9A95C9617B5B9D3005F557D /* ot-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444B17B53B6300787AC7 /* ot-icon-retina.png */; };
+		A9A95C9717B5B9D7005F557D /* ot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A93A444D17B53B6D00787AC7 /* ot-icon.png */; };
+		A9A95CC917B5C5EC005F557D /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CB717B5C5EC005F557D /* AFHTTPClient.m */; };
+		A9A95CCA17B5C5EC005F557D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CB917B5C5EC005F557D /* AFHTTPRequestOperation.m */; };
+		A9A95CCB17B5C5EC005F557D /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CBB17B5C5EC005F557D /* AFImageRequestOperation.m */; };
+		A9A95CCC17B5C5EC005F557D /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CBD17B5C5EC005F557D /* AFJSONRequestOperation.m */; };
+		A9A95CCD17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CBF17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.m */; };
+		A9A95CCE17B5C5EC005F557D /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CC217B5C5EC005F557D /* AFPropertyListRequestOperation.m */; };
+		A9A95CCF17B5C5EC005F557D /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CC417B5C5EC005F557D /* AFURLConnectionOperation.m */; };
+		A9A95CD017B5C5EC005F557D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CC617B5C5EC005F557D /* AFXMLRequestOperation.m */; };
+		A9A95CD117B5C5EC005F557D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CC817B5C5EC005F557D /* UIImageView+AFNetworking.m */; };
+		A9A95CD317B5D898005F557D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD217B5D898005F557D /* MobileCoreServices.framework */; };
+		A9A95CD517B5D8A7005F557D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */; };
+		A9A95CD717B5D921005F557D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD617B5D921005F557D /* Security.framework */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
 		A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D218179B36590018FB60 /* Foundation.framework */; };
 		A9F5D21B179B36590018FB60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D21A179B36590018FB60 /* CoreGraphics.framework */; };
@@ -34,10 +46,8 @@
 		A9F5D251179B36590018FB60 /* outagetrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D250179B36590018FB60 /* outagetrackerTests.m */; };
 		A9F5D25F179B61810018FB60 /* OtOutageDataCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D25E179B61810018FB60 /* OtOutageDataCtrl.m */; };
 		A9F5D262179B62560018FB60 /* OtOutage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D261179B62560018FB60 /* OtOutage.m */; };
-		A9F5D269179B68310018FB60 /* OtOutageFetcherImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D268179B68310018FB60 /* OtOutageFetcherImpl.m */; };
-		A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */; };
-		A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2317ACA645009F63D7 /* app-icon.png */; };
-		A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */; };
+		A9F5D269179B68310018FB60 /* OtOutageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D268179B68310018FB60 /* OtOutageFetcher.m */; };
+		A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */; };
 		A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2917ADAE56009F63D7 /* OtUtils.m */; };
 		A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */; };
 /* End PBXBuildFile section */
@@ -64,6 +74,30 @@
 		A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
 		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
+		A9A95C9317B5B685005F557D /* OtConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtConstants.h; sourceTree = "<group>"; };
+		A9A95CB617B5C5EC005F557D /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		A9A95CB717B5C5EC005F557D /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		A9A95CB817B5C5EC005F557D /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		A9A95CB917B5C5EC005F557D /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		A9A95CBA17B5C5EC005F557D /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		A9A95CBB17B5C5EC005F557D /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		A9A95CBC17B5C5EC005F557D /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		A9A95CBD17B5C5EC005F557D /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		A9A95CBE17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		A9A95CBF17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		A9A95CC017B5C5EC005F557D /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		A9A95CC117B5C5EC005F557D /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		A9A95CC217B5C5EC005F557D /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		A9A95CC317B5C5EC005F557D /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		A9A95CC417B5C5EC005F557D /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		A9A95CC517B5C5EC005F557D /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		A9A95CC617B5C5EC005F557D /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		A9A95CC717B5C5EC005F557D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		A9A95CC817B5C5EC005F557D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		A9A95CD217B5D898005F557D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A9A95CD617B5D921005F557D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A9A95CD817B5E61B005F557D /* OtOutageFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcherProtocol.h; sourceTree = "<group>"; };
 		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5D216179B36590018FB60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9F5D218179B36590018FB60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,13 +123,10 @@
 		A9F5D25E179B61810018FB60 /* OtOutageDataCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageDataCtrl.m; sourceTree = "<group>"; };
 		A9F5D260179B62560018FB60 /* OtOutage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutage.h; sourceTree = "<group>"; };
 		A9F5D261179B62560018FB60 /* OtOutage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutage.m; sourceTree = "<group>"; };
-		A9F5D267179B68310018FB60 /* OtOutageFetcherImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcherImpl.h; sourceTree = "<group>"; };
-		A9F5D268179B68310018FB60 /* OtOutageFetcherImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageFetcherImpl.m; sourceTree = "<group>"; };
-		A9F5D26A179B69620018FB60 /* OtOutageFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcher.h; sourceTree = "<group>"; };
-		A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcherImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtDummyOutageFetcherImpl.h; sourceTree = "<group>"; };
-		A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageFetcherImpl.m; sourceTree = "<group>"; };
-		A9FA1A2317ACA645009F63D7 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "../app-icon.png"; sourceTree = "<group>"; };
-		A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-retina.png"; path = "../app-icon-retina.png"; sourceTree = "<group>"; };
+		A9F5D267179B68310018FB60 /* OtOutageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtOutageFetcher.h; sourceTree = "<group>"; };
+		A9F5D268179B68310018FB60 /* OtOutageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtOutageFetcher.m; sourceTree = "<group>"; };
+		A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtDummyOutageFetcher.h; sourceTree = "<group>"; };
+		A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtDummyOutageFetcher.m; sourceTree = "<group>"; };
 		A9FA1A2817ADAE56009F63D7 /* OtUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtUtils.h; sourceTree = "<group>"; };
 		A9FA1A2917ADAE56009F63D7 /* OtUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtUtils.m; sourceTree = "<group>"; };
 		A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtMasterViewOutageCell.h; sourceTree = "<group>"; };
@@ -107,6 +138,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A95CD717B5D921005F557D /* Security.framework in Frameworks */,
+				A9A95CD517B5D8A7005F557D /* SystemConfiguration.framework in Frameworks */,
+				A9A95CD317B5D898005F557D /* MobileCoreServices.framework in Frameworks */,
 				A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */,
 				A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */,
 				A9F5D21B179B36590018FB60 /* CoreGraphics.framework in Frameworks */,
@@ -131,13 +165,39 @@
 		A925DC09179C423B00C04F42 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				A9FA1A2517ACA648009F63D7 /* app-icon-retina.png */,
-				A9FA1A2317ACA645009F63D7 /* app-icon.png */,
+				A93A444D17B53B6D00787AC7 /* ot-icon.png */,
+				A93A444B17B53B6300787AC7 /* ot-icon-retina.png */,
 				A925DC0E179C434000C04F42 /* gear_24.png */,
 				A925DC0C179C432100C04F42 /* gear_48.png */,
 				A925DC0A179C429F00C04F42 /* gear_64.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		A9A95CB517B5C5EB005F557D /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A9A95CB617B5C5EC005F557D /* AFHTTPClient.h */,
+				A9A95CB717B5C5EC005F557D /* AFHTTPClient.m */,
+				A9A95CB817B5C5EC005F557D /* AFHTTPRequestOperation.h */,
+				A9A95CB917B5C5EC005F557D /* AFHTTPRequestOperation.m */,
+				A9A95CBA17B5C5EC005F557D /* AFImageRequestOperation.h */,
+				A9A95CBB17B5C5EC005F557D /* AFImageRequestOperation.m */,
+				A9A95CBC17B5C5EC005F557D /* AFJSONRequestOperation.h */,
+				A9A95CBD17B5C5EC005F557D /* AFJSONRequestOperation.m */,
+				A9A95CBE17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.h */,
+				A9A95CBF17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.m */,
+				A9A95CC017B5C5EC005F557D /* AFNetworking.h */,
+				A9A95CC117B5C5EC005F557D /* AFPropertyListRequestOperation.h */,
+				A9A95CC217B5C5EC005F557D /* AFPropertyListRequestOperation.m */,
+				A9A95CC317B5C5EC005F557D /* AFURLConnectionOperation.h */,
+				A9A95CC417B5C5EC005F557D /* AFURLConnectionOperation.m */,
+				A9A95CC517B5C5EC005F557D /* AFXMLRequestOperation.h */,
+				A9A95CC617B5C5EC005F557D /* AFXMLRequestOperation.m */,
+				A9A95CC717B5C5EC005F557D /* UIImageView+AFNetworking.h */,
+				A9A95CC817B5C5EC005F557D /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		A9F5D20A179B36590018FB60 = {
@@ -162,6 +222,9 @@
 		A9F5D215179B36590018FB60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9A95CD617B5D921005F557D /* Security.framework */,
+				A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */,
+				A9A95CD217B5D898005F557D /* MobileCoreServices.framework */,
 				A9F5D216179B36590018FB60 /* UIKit.framework */,
 				A9F5D218179B36590018FB60 /* Foundation.framework */,
 				A9F5D21A179B36590018FB60 /* CoreGraphics.framework */,
@@ -182,6 +245,7 @@
 				A9F5D227179B36590018FB60 /* OtAppDelegate.h */,
 				A9F5D228179B36590018FB60 /* OtAppDelegate.m */,
 				A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */,
+				A9A95CB517B5C5EB005F557D /* AFNetworking */,
 				A9F5D21F179B36590018FB60 /* Supporting Files */,
 			);
 			path = outagetracker;
@@ -195,8 +259,6 @@
 				A9F5D221179B36590018FB60 /* InfoPlist.strings */,
 				A9F5D224179B36590018FB60 /* main.m */,
 				A9F5D226179B36590018FB60 /* outagetracker-Prefix.pch */,
-				A93A444D17B53B6D00787AC7 /* ot-icon.png */,
-				A93A444B17B53B6300787AC7 /* ot-icon-retina.png */,
 				A93A444917B5347D00787AC7 /* Default.png */,
 				A93A444717B5347300787AC7 /* Default@2x.png */,
 				A93A444517B532FD00787AC7 /* Default-568h@2x.png */,
@@ -259,11 +321,11 @@
 		A9F5D266179B68140018FB60 /* remote */ = {
 			isa = PBXGroup;
 			children = (
-				A9F5D267179B68310018FB60 /* OtOutageFetcherImpl.h */,
-				A9F5D268179B68310018FB60 /* OtOutageFetcherImpl.m */,
-				A9F5D26A179B69620018FB60 /* OtOutageFetcher.h */,
-				A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcherImpl.h */,
-				A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcherImpl.m */,
+				A9F5D267179B68310018FB60 /* OtOutageFetcher.h */,
+				A9F5D268179B68310018FB60 /* OtOutageFetcher.m */,
+				A9F5D26B179B697F0018FB60 /* OtDummyOutageFetcher.h */,
+				A9F5D26C179B697F0018FB60 /* OtDummyOutageFetcher.m */,
+				A9A95CD817B5E61B005F557D /* OtOutageFetcherProtocol.h */,
 			);
 			name = remote;
 			sourceTree = "<group>";
@@ -271,6 +333,7 @@
 		A9FA1A2717ADAE33009F63D7 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				A9A95C9317B5B685005F557D /* OtConstants.h */,
 				A9FA1A2817ADAE56009F63D7 /* OtUtils.h */,
 				A9FA1A2917ADAE56009F63D7 /* OtUtils.m */,
 			);
@@ -354,13 +417,11 @@
 				A925DC0D179C432100C04F42 /* gear_48.png in Resources */,
 				A925DC0F179C434000C04F42 /* gear_24.png in Resources */,
 				A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */,
-				A9FA1A2417ACA645009F63D7 /* app-icon.png in Resources */,
-				A9FA1A2617ACA648009F63D7 /* app-icon-retina.png in Resources */,
 				A93A444617B532FE00787AC7 /* Default-568h@2x.png in Resources */,
 				A93A444817B5347300787AC7 /* Default@2x.png in Resources */,
 				A93A444A17B5347D00787AC7 /* Default.png in Resources */,
-				A93A444C17B53B6300787AC7 /* ot-icon-retina.png in Resources */,
-				A93A444E17B53B6D00787AC7 /* ot-icon.png in Resources */,
+				A9A95C9617B5B9D3005F557D /* ot-icon-retina.png in Resources */,
+				A9A95C9717B5B9D7005F557D /* ot-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,11 +462,20 @@
 				A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */,
 				A9F5D25F179B61810018FB60 /* OtOutageDataCtrl.m in Sources */,
 				A9F5D262179B62560018FB60 /* OtOutage.m in Sources */,
-				A9F5D269179B68310018FB60 /* OtOutageFetcherImpl.m in Sources */,
-				A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcherImpl.m in Sources */,
+				A9F5D269179B68310018FB60 /* OtOutageFetcher.m in Sources */,
+				A9F5D26D179B697F0018FB60 /* OtDummyOutageFetcher.m in Sources */,
 				A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */,
 				A9FA1A2A17ADAE56009F63D7 /* OtUtils.m in Sources */,
 				A9FA1A2D17ADB202009F63D7 /* OtMasterViewOutageCell.m in Sources */,
+				A9A95CC917B5C5EC005F557D /* AFHTTPClient.m in Sources */,
+				A9A95CCA17B5C5EC005F557D /* AFHTTPRequestOperation.m in Sources */,
+				A9A95CCB17B5C5EC005F557D /* AFImageRequestOperation.m in Sources */,
+				A9A95CCC17B5C5EC005F557D /* AFJSONRequestOperation.m in Sources */,
+				A9A95CCD17B5C5EC005F557D /* AFNetworkActivityIndicatorManager.m in Sources */,
+				A9A95CCE17B5C5EC005F557D /* AFPropertyListRequestOperation.m in Sources */,
+				A9A95CCF17B5C5EC005F557D /* AFURLConnectionOperation.m in Sources */,
+				A9A95CD017B5C5EC005F557D /* AFXMLRequestOperation.m in Sources */,
+				A9A95CD117B5C5EC005F557D /* UIImageView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+  # ruby encoding: utf-8
+  Outage.create([{outage_id:"11", description:"Dikmen Elektrik Kesintisi", location:"Ankara, Cankaya", start_date:"2013-08-10 09:00:00",
+                  end_date:"2013-08-10 09:00:00", address:"Ankara, Dikmen", affected_customers:3400},
+                 {outage_id:"12", description:"Batikent Elektrik Kesintisi", location:"Ankara, YEnimahalle", start_date:"2013-08-11 02:20:00",
+                  end_date:"2013-08-11 09:10:00", address:"Ankara, Batikent", affected_customers:5600}
+                ])
+

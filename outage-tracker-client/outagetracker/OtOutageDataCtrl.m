@@ -8,13 +8,13 @@
 
 #import "OtOutage.h"
 #import "OtOutageDataCtrl.h"
-#import "OtDummyOutageFetcherImpl.h"
+#import "OtOutageFetcher.h"
+#import "OtDummyOutageFetcher.h"
 
 
 @interface OtOutageDataCtrl()
 
-@property () id<OtOutageFetcher> outageFetcher;
-- (void)loadOutages;
+@property () id<OtOutageFetcherProtocol> outageFetcher;
 
 @end
 
@@ -25,28 +25,14 @@
 {
     if (self = [super init])
     {
-        [self loadOutages];
         return self;
     }
     return nil;
 }
 
--(void) loadOutages
-{    
-    if(self.outageFetcher == nil)
-    {
-        self.outageFetcher = [[OtDummyOutageFetcherImpl alloc] init];
-    }
-    
-    self.outageList = [[NSMutableArray alloc] init];
-    NSMutableArray *outages = [self.outageFetcher getOutages];
-    for (OtOutage *outage in outages) {
-        [self.outageList addObject:outage];
-    }
-}
-
 // to avoid setting immutable list
-- (void) setOutageList:(NSMutableArray *) newList {
+- (void) setOutageList:(NSMutableArray *) newList
+{
     if (_outageList != newList) {
         _outageList = [newList mutableCopy];
     }
@@ -67,9 +53,21 @@
     [self.outageList addObject:outage];
 }
 
--(void) reloadOutages
+- (void) reloadOutagesAndNotify:(void (^) (void))onComplete
 {
-    [self loadOutages];
+    if(self.outageFetcher == nil)
+    {
+        self.outageFetcher = [[OtOutageFetcher alloc] init];
+    }
+    
+    self.outageList = [[NSMutableArray alloc] init];
+    [self.outageFetcher getOutages:^(NSMutableArray *outages) {
+        for (OtOutage *outage in outages) {
+            [self.outageList addObject:outage];
+        }
+        
+        onComplete();
+    }];
 }
 
 @end

@@ -33,6 +33,8 @@
     refreshControl.tintColor = [UIColor whiteColor];
     [refreshControl addTarget:self action:@selector(refreshViewData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    
+    [self refreshViewData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,8 +88,9 @@
 
 - (void)refreshViewData
 {
-    [self.dataController reloadOutages];
-    [self performSelector:@selector(updateTable) withObject:nil afterDelay:1];
+    [self.dataController reloadOutagesAndNotify:^{
+        [self updateTable];
+    }];
 }
 
 - (void)updateTable
