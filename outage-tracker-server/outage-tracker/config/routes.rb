@@ -6,10 +6,11 @@ OutageTracker::Application.routes.draw do
   root 'welcome#index'
 
 
-  resources :outage
+  resources :outages
 
   namespace :api do
-    resources :outage, :defaults => {format: 'json'}
+    resources :outages, :defaults => {format: 'json'}
+    resources :users, :defaults => {format: 'json'}
   end
 
 

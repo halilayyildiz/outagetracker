@@ -1,6 +1,6 @@
 class AddOutageTable < ActiveRecord::Migration
   def change
-    create_table :outage do |t|
+    create_table :outages do |t|
       t.string :outage_id
       t.string :description
       t.string :location

@@ -1,0 +1,36 @@
+<p>
+  <strong>Outage Id:</strong>
+  <%= @outages.outage_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @outages.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @outages.location %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @outages.start_date %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @outages.end_date %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @outages.address %>
+</p>
+
+<p>
+  <strong>Aff Customers:</strong>
+  <%= @outages.affected_customers %>
+</p>
+
+<%= link_to 'All Outages', outages_path%>

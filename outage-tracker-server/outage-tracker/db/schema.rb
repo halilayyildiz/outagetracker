@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809212041) do
+ActiveRecord::Schema.define(version: 20130810134338) do
 
-  create_table "outage", force: true do |t|
+  create_table "Outages", force: true do |t|
     t.string   "outage_id"
     t.string   "description"
     t.string   "location"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20130809212041) do
     t.datetime "end_date"
     t.string   "address"
     t.integer  "affected_customers"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "device_id"
+    t.string   "installation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
