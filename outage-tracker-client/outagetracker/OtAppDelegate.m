@@ -20,6 +20,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
+    // ask for push notifications
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -78,6 +82,22 @@
             abort();
         } 
     }
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:deviceToken forKey:OT_PUSH_TOKEN];
+    [defaults synchronize];
+    NSLog(@"Device token is saved");
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:nil forKey:OT_PUSH_TOKEN];
+    [defaults synchronize];
+	NSLog(@"Failed to get device token, error: %@", error);
 }
 
 

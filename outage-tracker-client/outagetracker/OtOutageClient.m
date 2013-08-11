@@ -15,6 +15,7 @@
 
 -(NSMutableArray *)parseOutage:(NSArray *)outagesJSON;
 - (NSString *)parseUserId:(NSDictionary *)userJSON;
+- (NSString *)getDeviceToken;
 
 @end
 
@@ -54,7 +55,7 @@
     NSURL *url = [NSURL URLWithString:urlStr];
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-    NSDictionary *params = @{API_REGISTER_USER_PARAM_INST: installationId};
+    NSDictionary *params = @{API_REGISTER_USER_PARAM_INST: installationId, API_REGISTER_USER_PARAM_PUSH: [self getDeviceToken]};
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:urlStr parameters:params];
     
     AFJSONRequestOperation *operation =
@@ -98,6 +99,13 @@
 {
     NSInteger userId = [userJSON[@"id"] integerValue];
     return [NSString stringWithFormat:@"%d", userId];
+}
+
+- (NSString *)getDeviceToken
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *token = [defaults valueForKey:OT_PUSH_TOKEN];
+    return token;
 }
 
 @end
