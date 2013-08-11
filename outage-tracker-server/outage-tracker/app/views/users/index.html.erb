@@ -1,0 +1,17 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Installation</th>
+    <th>Push Token</th>
+  </tr>
+
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.installation_id %></td>
+        <td><%= user.push_id %></td>
+      </tr>
+  <% end %>
+</table>

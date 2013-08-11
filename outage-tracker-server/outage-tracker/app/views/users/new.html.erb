@@ -1,0 +1,17 @@
+<h1>New User</h1>
+
+<%= form_for @users, url: users_path do |f| %>
+    <p>
+      <%= f.label 'Installation Id' %><br>
+      <%= f.text_field :installation_id %>
+    </p>
+
+    <p>
+      <%= f.label 'Push Token' %><br>
+      <%= f.text_field :push_id %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

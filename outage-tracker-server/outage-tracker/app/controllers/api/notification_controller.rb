@@ -1,4 +1,6 @@
-class NotificationController < ApplicationController
+class Api::NotificationController < ApplicationController
+
+  skip_before_filter :verify_authenticity_token
 
   def new
 
@@ -13,7 +15,8 @@ class NotificationController < ApplicationController
   end
 
   def message
-    user = User.find_by 'installation_id = ?', params[:installation_id]
+    # user = User.find_by 'id = ?', params[:id]
+    user = User.find(params[:id])
 
     APNS.host = 'gateway.sandbox.push.apple.com'
     APNS.pem  = 'app/assets/apns.pem'
@@ -22,6 +25,8 @@ class NotificationController < ApplicationController
 
     #APNS.send_notification(device_token, 'Kesinti var yeeenn!')
     APNS.send_notification(device_token, alert:'Anaammm... Elektrik gitti !!!', badge:1, sound:'default')
+
+    render json:user
   end
 
 end

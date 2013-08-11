@@ -5,17 +5,13 @@ OutageTracker::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'notification/new'                        =>    'notification#new'
-  get 'notification/message/:installation_id'   =>    'notification#message'
+  get   'api/notification/new'                   =>    'api/notification#new'
+  get   'api/notification/message/:id'           =>    'api/notification#message'
+  get   'api/outage/all'                         =>    'api/outage#index'
+  post  'api/user/register'                      =>    'api/user#register'
 
   resources :outages
-
-  namespace :api do
-    resources :outages, :defaults => {format: 'json'}
-    resources :users, :defaults => {format: 'json'}
-  end
-
-
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
