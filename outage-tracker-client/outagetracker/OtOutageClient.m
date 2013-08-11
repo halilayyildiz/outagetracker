@@ -105,6 +105,9 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *token = [defaults valueForKey:OT_PUSH_TOKEN];
+    if (token == nil) {
+        return @"";
+    }
     return token;
 }
 

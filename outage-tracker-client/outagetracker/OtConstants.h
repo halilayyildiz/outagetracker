@@ -15,9 +15,9 @@
 #endif
 
 #define API_HTTP_PREFIX                     @"http://"
-#define API_ALL_OUTAGES_PATH                @"/api/outages"
-#define API_REGISTER_USER_PATH              @"/api/users"
-#define API_REGISTER_USER_PARAM_INST        @"installation_id"
+#define API_ALL_OUTAGES_PATH                @"/api/outage/all"
+#define API_REGISTER_USER_PATH              @"/api/user/register"
+#define API_REGISTER_USER_PARAM_INST        @"inst_id"
 #define API_REGISTER_USER_PARAM_PUSH        @"push_id"
 
 #define OT_USER_ID                          @"otUserId"
