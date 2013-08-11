@@ -5,6 +5,8 @@ OutageTracker::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get 'notification/new'                        =>    'notification#new'
+  get 'notification/message/:installation_id'   =>    'notification#message'
 
   resources :outages
 
@@ -12,6 +14,7 @@ OutageTracker::Application.routes.draw do
     resources :outages, :defaults => {format: 'json'}
     resources :users, :defaults => {format: 'json'}
   end
+
 
 
   # Example of regular route:
