@@ -598,7 +598,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="FcO-vP-eg5" firstAttribute="leading" secondItem="aQ6-gn-Dpm" secondAttribute="leading" constant="20" type="default" id="Nml-hL-CLn"/>
-                                            <constraint firstAttribute="bottom" secondItem="FcO-vP-eg5" secondAttribute="bottom" constant="20" type="default" id="PF7-cz-m0a"/>
+                                            <constraint firstItem="FcO-vP-eg5" firstAttribute="top" secondItem="aQ6-gn-Dpm" secondAttribute="top" constant="12" id="bMq-re-AHw"/>
                                             <constraint firstAttribute="trailing" secondItem="FcO-vP-eg5" secondAttribute="trailing" constant="20" type="default" id="mxT-BE-h6m"/>
                                         </constraints>
                                     </tableViewCell>

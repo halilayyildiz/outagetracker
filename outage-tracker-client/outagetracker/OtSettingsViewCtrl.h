@@ -14,6 +14,4 @@
 @property (strong, nonatomic) IBOutlet UITextField *installationId;
 @property (strong, nonatomic) IBOutlet UITextField *appVersion;
 
-- (IBAction)hideKeyboard:(id)sender forEvent:(UIEvent *)event;
-
 @end

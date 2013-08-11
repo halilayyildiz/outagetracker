@@ -18,6 +18,7 @@ class Api::UsersController < ApplicationController
   def create
     # params.permit(:push_id, :installation_id, :format)
     # Rails.logger.debug params.inspect
+    sleep 2
 
     @user = User.new(installation_id:params[:installation_id], push_id:params[:push_id])
     respond_to do |format|

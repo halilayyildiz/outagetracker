@@ -30,6 +30,7 @@
 		A9A95CD517B5D8A7005F557D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD417B5D8A7005F557D /* SystemConfiguration.framework */; };
 		A9A95CD717B5D921005F557D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A95CD617B5D921005F557D /* Security.framework */; };
 		A9B790B017B6F30000197731 /* ot-bill-example.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B790AF17B6F30000197731 /* ot-bill-example.png */; };
+		A9B790B517B70EBF00197731 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B790B417B70EBF00197731 /* MBProgressHUD.m */; };
 		A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
 		A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D218179B36590018FB60 /* Foundation.framework */; };
@@ -101,6 +102,8 @@
 		A9A95CD617B5D921005F557D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A9A95CD817B5E61B005F557D /* OtOutageClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtOutageClientProtocol.h; sourceTree = "<group>"; };
 		A9B790AF17B6F30000197731 /* ot-bill-example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ot-bill-example.png"; sourceTree = "<group>"; };
+		A9B790B317B70EBF00197731 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A9B790B417B70EBF00197731 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtWelcomeViewCtrl.h; sourceTree = "<group>"; };
 		A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtWelcomeViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +209,24 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		A9B790B117B70E6E00197731 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A9B790B217B70EAE00197731 /* MBProgressHUD */,
+				A9A95CB517B5C5EB005F557D /* AFNetworking */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		A9B790B217B70EAE00197731 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A9B790B317B70EBF00197731 /* MBProgressHUD.h */,
+				A9B790B417B70EBF00197731 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		A9F5D20A179B36590018FB60 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +264,7 @@
 		A9F5D21E179B36590018FB60 /* outagetracker */ = {
 			isa = PBXGroup;
 			children = (
+				A9B790B117B70E6E00197731 /* libs */,
 				A9FA1A2717ADAE33009F63D7 /* utils */,
 				A9F5D266179B68140018FB60 /* remote */,
 				A9F5D265179B629F0018FB60 /* controller */,
@@ -251,7 +273,6 @@
 				A9F5D227179B36590018FB60 /* OtAppDelegate.h */,
 				A9F5D228179B36590018FB60 /* OtAppDelegate.m */,
 				A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */,
-				A9A95CB517B5C5EB005F557D /* AFNetworking */,
 				A9F5D21F179B36590018FB60 /* Supporting Files */,
 			);
 			path = outagetracker;
@@ -486,6 +507,7 @@
 				A9A95CD017B5C5EC005F557D /* AFXMLRequestOperation.m in Sources */,
 				A9A95CD117B5C5EC005F557D /* UIImageView+AFNetworking.m in Sources */,
 				A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */,
+				A9B790B517B70EBF00197731 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

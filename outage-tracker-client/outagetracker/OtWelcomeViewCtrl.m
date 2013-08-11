@@ -32,6 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.tableView addGestureRecognizer:tap];
+    
+    // set styles
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
 //    [self.registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -50,27 +55,21 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    NSLog(@"segue triggered !");
-    
-    if ([identifier isEqualToString:@"continueOnWelcome"])
-    {
-        return NO;
-    }
-    
     return NO;
 }
 
 
 - (IBAction)next:(UIButton *)sender
 {
-    NSLog(@"Register button clicked !");
-    // TODO
-    // waiting notification start
-    
     id<OtOutageClientProtocol> outageClient = [[OtOutageClient alloc] init];
     NSString *installationId = self.installationId.text;
     
+    [MBProgressHUD showHUDAddedTo:self.tableView  animated:YES];
+    
     [outageClient registerWithInstallationId:installationId notify:^(NSString *userId){
+        
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        
         if (userId != nil) {
             // first save user id
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -86,9 +85,13 @@
             [av show];
             NSLog(@"User registration failed !");
         }
-        
-        // TODO
-        // waiting notification stop
     }]; 
 }
+
+- (void)handleTap:(UITapGestureRecognizer *)recognizer
+{
+    NSLog(@"tap began");
+    [self.view endEditing:YES];
+}
+
 @end

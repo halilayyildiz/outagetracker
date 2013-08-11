@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
     
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.tableView addGestureRecognizer:tap];
+    
     // set styles
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
@@ -50,10 +53,9 @@
 }
 
 
-- (IBAction)hideKeyboard:(id)sender forEvent:(UIEvent *)event {
-    
-    // TODO
-    NSLog(@"hide keyboard..");
-    
+- (void)handleTap:(UITapGestureRecognizer *)recognizer
+{
+    NSLog(@"tap began");
+    [self.view endEditing:YES];
 }
 @end
