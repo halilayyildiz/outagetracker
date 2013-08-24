@@ -5,11 +5,13 @@ Mobile iOS application to track electricity outages.
 
 Features
 -------------------
-- Basic outage listing.
-- Calendar view for outages.
-- Push notifications for actual outages.
-- Reminder for planned outages.
-
+- Welcome screen for user registration
+- Basic outage listing
+- Outage details with maps view
+- Push notifications for new outages
+- Settings page to change user information
+- Reminder (or local notification) for planned outages
+- Calendar view for outages
 
 
 Development Stack
