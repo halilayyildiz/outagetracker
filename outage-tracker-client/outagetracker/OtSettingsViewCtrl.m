@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import "MFSideMenu.h"
 #import "OtSettingsViewCtrl.h"
 #import "OtUtils.h"
 
@@ -52,10 +53,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showSideMenu:(id)sender
+{
+    [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
+}
+- (IBAction)saveSettings:(id)sender
+{
+    if (self.installationId)
+    {
+        // save installation id to user settings
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *installationIdValue = self.installationId.text;
+        [defaults setObject:installationIdValue forKey:OT_INST_ID];
+        [defaults synchronize];
+        NSLog(@"User settings are saved");
+        
+        [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
+        
+        // navigate to main view
+//        UIViewController *targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
+//        targetViewController.title = @"Outages";
+//        
+//        UINavigationController *navigationController = self.menuContainerViewController.centerViewController;
+//        NSArray *controllers = [NSArray arrayWithObject:targetViewController];
+//        navigationController.viewControllers = controllers;
+//        [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
+        
+    }
+}
 
 - (void)handleTap:(UITapGestureRecognizer *)recognizer
 {
     NSLog(@"tap began");
     [self.view endEditing:YES];
 }
+
+
 @end

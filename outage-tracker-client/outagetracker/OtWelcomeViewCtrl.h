@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *installationId;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
-- (IBAction)next:(UIButton *)sender;
+
+-(IBAction)registerUser:(UIButton *)sender;
 
 @end

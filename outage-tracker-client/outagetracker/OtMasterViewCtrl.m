@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import "MFSideMenu.h"
 #import "OtOutage.h"
 #import "OtMasterViewCtrl.h"
 #import "OtDetailViewCtrl.h"
@@ -14,6 +15,12 @@
 #import "OtUtils.h"
 #import "OtMasterViewOutageCell.h"
 
+
+@interface OtMasterViewCtrl ()
+
+-(BOOL)isUserRegistered;
+
+@end
 
 @implementation OtMasterViewCtrl
 
@@ -26,7 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.hidesBackButton = YES;
     
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
@@ -34,6 +40,12 @@
     refreshControl.tintColor = [UIColor whiteColor];
     [refreshControl addTarget:self action:@selector(refreshViewData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    
+    // if user is not registered, then navigate to main screen
+    if (!self.isUserRegistered)
+    {
+        [self performSegueWithIdentifier: @"showWelcomeView" sender: self];
+    }
     
     [self refreshViewData];
 }
@@ -109,34 +121,22 @@
     }
 }
 
-- (IBAction)done:(UIStoryboardSegue *)segue
+- (IBAction)showSideMenu:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"saveSettings"]) {
-        
-        OtSettingsViewCtrl *settingsCtrl = [segue sourceViewController];
-        if (settingsCtrl.installationId) {
-            // save installation id to user settings
-            
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            NSString *installationIdValue = settingsCtrl.installationId.text;
-            [defaults setObject:installationIdValue forKey:OT_INST_ID];
-            [defaults synchronize];
-            NSLog(@"User settings are saved");
-            // reload data for possibly new installation id
-            
-            // TODO
-            
-            [[self tableView] reloadData];
-        }
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
+    [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
 }
 
-- (IBAction)cancel:(UIStoryboardSegue *)segue
+-(BOOL)isUserRegistered
 {
-    if ([[segue identifier] isEqualToString:@"cancelSettings"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
-    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userId = [defaults valueForKey:OT_USER_ID];
+    
+    return !(userId == nil || [userId isEqualToString:@""]);
+}
+
+- (IBAction)userRegistrationCompleted:(UIStoryboardSegue *)unwindSegue
+{
+    NSLog(@"User Registration Completed.");
 }
 
 

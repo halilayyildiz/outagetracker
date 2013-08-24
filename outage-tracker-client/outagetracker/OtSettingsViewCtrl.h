@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *installationId;
 @property (strong, nonatomic) IBOutlet UITextField *appVersion;
 
+-(IBAction)showSideMenu:(id)sender;
+
 @end

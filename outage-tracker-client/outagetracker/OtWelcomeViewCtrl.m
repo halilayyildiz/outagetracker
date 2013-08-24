@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import "MFSideMenuContainerViewController.h"
 #import "OtUtils.h"
 #import "OtWelcomeViewCtrl.h"
 #import "OtOutageClient.h"
@@ -32,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.tableView addGestureRecognizer:tap];
@@ -44,7 +46,6 @@
 //    self.registerButton.layer.borderColor = [UIColor whiteColor].CGColor;
 //    self.registerButton.layer.borderWidth = 0.5f;
 //    self.registerButton.layer.cornerRadius = 10.0f;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +60,7 @@
 }
 
 
-- (IBAction)next:(UIButton *)sender
+- (IBAction)registerUser:(UIButton *)sender
 {
     id<OtOutageClientProtocol> outageClient = [[OtOutageClient alloc] init];
     NSString *installationId = self.installationId.text;
@@ -77,8 +78,9 @@
             [defaults setObject:installationId forKey:OT_INST_ID];
             [defaults synchronize];
             NSLog(@"User id saved.");
-            // then navigate
-            [self performSegueWithIdentifier: @"continueOnWelcome" sender: self];
+            
+            // then back to main window
+            [self performSegueWithIdentifier: @"backToMainViewAfterRegistration" sender: self];
         } else {
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Unable to complete registration." message:[NSString stringWithFormat:@"Unexpected Error"]
                                                         delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

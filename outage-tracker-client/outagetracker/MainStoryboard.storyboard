@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qhn-1e-G2f">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="11">
+        <scene sceneID="suA-Mc-Xim">
             <objects>
-                <navigationController storyboardIdentifier="OtMainNavigationCtrl" id="3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                <navigationController storyboardIdentifier="OtMainNavigationCtrl" definesPresentationContext="YES" id="qhn-1e-G2f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MWg-nR-aYR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRK-WD-aWZ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.086274512112140656" green="0.70588237047195435" blue="0.729411780834198" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="12" kind="relationship" relationship="rootViewController" id="aPp-4R-v6h"/>
+                        <segue destination="12" kind="relationship" relationship="rootViewController" id="FAU-EH-313"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spI-OX-vOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1039" y="-210"/>
+            <point key="canvasLocation" x="-964" y="210"/>
         </scene>
         <!--Ot Master View Ctrl - Master-->
         <scene sceneID="18">
@@ -132,16 +133,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Outages" id="36">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ylf-Gk-iLL">
+                        <barButtonItem key="leftBarButtonItem" image="ot-menu-icon.png" id="v2P-x6-4MP">
                             <connections>
-                                <segue destination="KJQ-DE-tq1" kind="modal" identifier="showSettings" id="fLb-hV-eU4"/>
+                                <action selector="showSideMenu:" destination="12" id="UKB-lY-IRB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="47B-bh-LM2" kind="push" identifier="showWelcomeView" id="Tpz-O8-fzC"/>
+                        <segue destination="NSs-5W-qZo" kind="push" identifier="showSettingsView" id="jJt-fM-cfP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="-210"/>
+            <point key="canvasLocation" x="-401" y="210"/>
         </scene>
         <!--Ot Detail View Ctrl - Outage Detail-->
         <scene sceneID="hpO-Uc-U9n">
@@ -359,7 +364,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxA-hp-Lvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="-210"/>
+            <point key="canvasLocation" x="169" y="210"/>
         </scene>
         <!--Ot Settings View Ctrl - Settings-->
         <scene sceneID="5jw-aX-qFe">
@@ -395,7 +400,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="hideKeyboard:forEvent:" destination="NSs-5W-qZo" eventType="touchUpOutside" id="Tmi-SG-FiL"/>
                                                         <outlet property="delegate" destination="NSs-5W-qZo" id="PBZ-sI-qoJ"/>
                                                     </connections>
                                                 </textField>
@@ -432,7 +436,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="hideKeyboard:forEvent:" destination="NSs-5W-qZo" eventType="touchUpOutside" id="DyQ-1s-NxL"/>
                                                         <outlet property="delegate" destination="NSs-5W-qZo" id="jIC-lS-Nms"/>
                                                     </connections>
                                                 </textField>
@@ -493,14 +496,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="AvM-gd-uQc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="meC-D9-2pU">
+                        <barButtonItem key="leftBarButtonItem" image="ot-menu-icon.png" id="meC-D9-2pU">
                             <connections>
-                                <segue destination="BWP-Vx-fXj" kind="unwind" identifier="cancelSettings" unwindAction="cancel:" id="STh-Xv-gkW"/>
+                                <action selector="showSideMenu:" destination="NSs-5W-qZo" id="Tc3-gb-GGH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="bw7-X8-v7b">
                             <connections>
-                                <segue destination="BWP-Vx-fXj" kind="unwind" identifier="saveSettings" unwindAction="done:" id="302-vT-btD"/>
+                                <action selector="saveSettings:" destination="NSs-5W-qZo" id="FKi-n8-yV4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -511,9 +514,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiV-jI-7Ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="BWP-Vx-fXj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="562"/>
+            <point key="canvasLocation" x="169" y="892"/>
         </scene>
         <!--Ot Welcome View Ctrl - Welcome-->
         <scene sceneID="jRC-Ww-HV9">
@@ -580,6 +582,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-vP-eg5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="BIT-PT-zPA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <state key="normal" title="Register">
                                                         <color key="titleColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
@@ -588,18 +593,29 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akT-Tn-86U">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <state key="normal" title="Register">
+                                                        <color key="titleColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
-                                                        <action selector="next:" destination="47B-bh-LM2" eventType="touchUpInside" id="6fL-eC-w2V"/>
-                                                        <segue destination="12" kind="push" identifier="continueOnWelcome" id="Glp-9f-qiC"/>
+                                                        <action selector="registerUser:" destination="47B-bh-LM2" eventType="touchUpInside" id="rg2-FF-HBK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="FcO-vP-eg5" firstAttribute="leading" secondItem="aQ6-gn-Dpm" secondAttribute="leading" constant="20" type="default" id="Nml-hL-CLn"/>
-                                            <constraint firstItem="FcO-vP-eg5" firstAttribute="top" secondItem="aQ6-gn-Dpm" secondAttribute="top" constant="12" id="bMq-re-AHw"/>
-                                            <constraint firstAttribute="trailing" secondItem="FcO-vP-eg5" secondAttribute="trailing" constant="20" type="default" id="mxT-BE-h6m"/>
+                                            <constraint firstItem="FcO-vP-eg5" firstAttribute="leading" secondItem="aQ6-gn-Dpm" secondAttribute="leading" type="default" id="A2f-Cw-s4M"/>
+                                            <constraint firstItem="FcO-vP-eg5" firstAttribute="top" secondItem="aQ6-gn-Dpm" secondAttribute="top" constant="397" id="Tf8-SH-Chu"/>
+                                            <constraint firstAttribute="trailing" secondItem="akT-Tn-86U" secondAttribute="trailing" constant="20" type="default" id="gY6-7f-30n"/>
+                                            <constraint firstItem="akT-Tn-86U" firstAttribute="top" secondItem="aQ6-gn-Dpm" secondAttribute="top" constant="16" id="idR-zg-8Kd"/>
+                                            <constraint firstItem="akT-Tn-86U" firstAttribute="leading" secondItem="aQ6-gn-Dpm" secondAttribute="leading" constant="20" type="default" id="n10-PA-x0d"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -614,50 +630,178 @@
                     <connections>
                         <outlet property="installationId" destination="JU8-W0-xeW" id="mNz-WX-peE"/>
                         <outlet property="registerButton" destination="FcO-vP-eg5" id="6gx-5b-3Iw"/>
+                        <segue destination="noa-GX-fUq" kind="unwind" identifier="backToMainViewAfterRegistration" unwindAction="userRegistrationCompleted:" id="Lny-3e-ET2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZF-Of-j86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="noa-GX-fUq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="366"/>
+            <point key="canvasLocation" x="169" y="-532"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FFk-Bv-2KV">
+        <!--Ot Side Menu View Controller-->
+        <scene sceneID="iTE-67-b9L">
             <objects>
-                <navigationController storyboardIdentifier="OtWelcomeNavigationCtrl" definesPresentationContext="YES" id="Wo8-KG-GTl" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BeX-4u-r2K">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
-                    </navigationBar>
+                <tableViewController storyboardIdentifier="OtSideMenuViewController" id="F7v-ii-QGw" customClass="OtSideMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WuC-6U-bOz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="535-Fe-AR0">
+                                <cells>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideMenuCell" id="97A-tN-W4r" customClass="OtSideMenuViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideMenuEtchedCellFirst" id="o3f-r4-CMG" customClass="OtSideMenuViewCell">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ot-outage-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lSA-Gb-zbd">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="rUh-be-ScB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Outages" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNs-cG-mk6">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.035294119268655777" green="0.086274512112140656" blue="0.035294119268655777" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lSA-Gb-zbd" firstAttribute="leading" secondItem="o3f-r4-CMG" secondAttribute="leading" constant="20" type="default" id="LOC-ge-cBX"/>
+                                            <constraint firstItem="FNs-cG-mk6" firstAttribute="leading" secondItem="lSA-Gb-zbd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qvp-3D-evd"/>
+                                            <constraint firstItem="FNs-cG-mk6" firstAttribute="top" secondItem="o3f-r4-CMG" secondAttribute="top" constant="11" id="iwn-xt-kw5"/>
+                                            <constraint firstAttribute="trailing" secondItem="FNs-cG-mk6" secondAttribute="trailing" constant="20" type="default" id="lHw-9p-RpQ"/>
+                                            <constraint firstItem="lSA-Gb-zbd" firstAttribute="centerY" secondItem="o3f-r4-CMG" secondAttribute="centerY" type="default" id="w4p-D2-QxB"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideMenuEtchedCell" id="rrE-nk-X3A" customClass="OtSideMenuViewCell">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ot-feedback-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAJ-W0-MNK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="Sv7-Q7-rP7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Claim Outage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxJ-cu-yKA">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.03529411927" green="0.086274512110000007" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lxJ-cu-yKA" firstAttribute="top" secondItem="rrE-nk-X3A" secondAttribute="top" constant="11" id="R5W-zx-bKv"/>
+                                            <constraint firstItem="GAJ-W0-MNK" firstAttribute="centerY" secondItem="rrE-nk-X3A" secondAttribute="centerY" type="default" id="Ue4-OK-gl1"/>
+                                            <constraint firstItem="lxJ-cu-yKA" firstAttribute="leading" secondItem="GAJ-W0-MNK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gNf-Mp-bfh"/>
+                                            <constraint firstAttribute="trailing" secondItem="lxJ-cu-yKA" secondAttribute="trailing" constant="20" type="default" id="jCc-8B-eAn"/>
+                                            <constraint firstItem="GAJ-W0-MNK" firstAttribute="leading" secondItem="rrE-nk-X3A" secondAttribute="leading" constant="20" type="default" id="v0a-Bg-ZYq"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideMenuEtchedCell" id="hDg-kt-rfh" customClass="OtSideMenuViewCell">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ot-settings-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="VdB-xD-dSJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="1Jb-n0-cwx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhA-jl-tIu">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.03529411927" green="0.086274512110000007" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uhA-jl-tIu" secondAttribute="trailing" constant="20" type="default" id="15j-Vm-mQx"/>
+                                            <constraint firstItem="VdB-xD-dSJ" firstAttribute="centerY" secondItem="hDg-kt-rfh" secondAttribute="centerY" type="default" id="1EX-30-TdI"/>
+                                            <constraint firstItem="VdB-xD-dSJ" firstAttribute="leading" secondItem="hDg-kt-rfh" secondAttribute="leading" constant="20" type="default" id="6Jx-Xq-O9f"/>
+                                            <constraint firstItem="uhA-jl-tIu" firstAttribute="top" secondItem="hDg-kt-rfh" secondAttribute="top" constant="11" id="GyJ-nU-Lyb"/>
+                                            <constraint firstItem="uhA-jl-tIu" firstAttribute="leading" secondItem="VdB-xD-dSJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="afb-Lh-I7R"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideMenuEtchedCellLast" id="vNc-Tr-vUY" customClass="OtSideMenuViewCell">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ot-about-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="TbR-rY-siY">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="yVy-dz-rON"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-1j-zJX">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.03529411927" green="0.086274512110000007" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="J0j-1j-zJX" firstAttribute="top" secondItem="vNc-Tr-vUY" secondAttribute="top" constant="11" id="4cg-yD-76x"/>
+                                            <constraint firstItem="TbR-rY-siY" firstAttribute="leading" secondItem="vNc-Tr-vUY" secondAttribute="leading" constant="20" type="default" id="ADh-OL-gWY"/>
+                                            <constraint firstItem="J0j-1j-zJX" firstAttribute="leading" secondItem="TbR-rY-siY" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="FAd-QM-5Ib"/>
+                                            <constraint firstItem="TbR-rY-siY" firstAttribute="centerY" secondItem="vNc-Tr-vUY" secondAttribute="centerY" type="default" id="TrY-ht-L1m"/>
+                                            <constraint firstAttribute="trailing" secondItem="J0j-1j-zJX" secondAttribute="trailing" constant="20" type="default" id="YcT-Kl-8Pp"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="F7v-ii-QGw" id="MZQ-lL-Lor"/>
+                            <outlet property="delegate" destination="F7v-ii-QGw" id="kVj-r7-YTJ"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <segue destination="47B-bh-LM2" kind="relationship" relationship="rootViewController" id="lK0-56-h28"/>
+                        <outlet property="navigateToAboutCell" destination="vNc-Tr-vUY" id="q8V-vs-lmw"/>
+                        <outlet property="navigateToClaimOutageCell" destination="rrE-nk-X3A" id="0Pk-f9-iZm"/>
+                        <outlet property="navigateToOutagesCell" destination="o3f-r4-CMG" id="jsw-85-o1m"/>
+                        <outlet property="navigateToSettingsCell" destination="hDg-kt-rfh" id="wCJ-4y-jge"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofn-Xs-HqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCk-lr-ArM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1039" y="562"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jN0-q2-zOi">
-            <objects>
-                <navigationController id="KJQ-DE-tq1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Hb-OR-Tts">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NSs-5W-qZo" kind="relationship" relationship="rootViewController" id="tS5-yW-4pr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OfF-aa-eZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="618" y="562"/>
+            <point key="canvasLocation" x="-1474" y="210"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ot-about-icon.png" width="24" height="24"/>
         <image name="ot-bill-example.png" width="590" height="550"/>
+        <image name="ot-feedback-icon.png" width="24" height="24"/>
+        <image name="ot-menu-icon.png" width="22" height="17"/>
+        <image name="ot-outage-icon.png" width="24" height="24"/>
+        <image name="ot-settings-icon.png" width="24" height="24"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -677,8 +821,8 @@
         <class className="OtMasterViewCtrl" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtMasterViewCtrl.h"/>
             <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="showSideMenu:"/>
+                <relationship kind="action" name="userRegistrationCompleted:" candidateClass="UIStoryboardSegue"/>
             </relationships>
         </class>
         <class className="OtMasterViewOutageCell" superclassName="UITableViewCell">
@@ -693,16 +837,29 @@
         <class className="OtSettingsViewCtrl" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtSettingsViewCtrl.h"/>
             <relationships>
-                <relationship kind="action" name="hideKeyboard:forEvent:"/>
+                <relationship kind="action" name="saveSettings:"/>
+                <relationship kind="action" name="showSideMenu:"/>
                 <relationship kind="outlet" name="appVersion" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="installationId" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="userId" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="OtSideMenuViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OtSideMenuViewCell.h"/>
+        </class>
+        <class className="OtSideMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OtSideMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navigateToAboutCell" candidateClass="OtSideMenuViewCell"/>
+                <relationship kind="outlet" name="navigateToClaimOutageCell" candidateClass="OtSideMenuViewCell"/>
+                <relationship kind="outlet" name="navigateToOutagesCell" candidateClass="OtSideMenuViewCell"/>
+                <relationship kind="outlet" name="navigateToSettingsCell" candidateClass="OtSideMenuViewCell"/>
+            </relationships>
+        </class>
         <class className="OtWelcomeViewCtrl" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtWelcomeViewCtrl.h"/>
             <relationships>
-                <relationship kind="action" name="next:" candidateClass="UIButton"/>
+                <relationship kind="action" name="registerUser:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="installationId" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="registerButton" candidateClass="UIButton"/>
             </relationships>
@@ -716,7 +873,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Glp-9f-qiC"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -26,6 +26,11 @@
 
 #define BGCOLOR                             0xD0D5DE
 #define FGCOLOR                             0x30AEB3
+#define SIDE_VIEW_BG_COLOR                  0x23262B
+#define SIDE_VIEW_ETCH_LIGHT_COLOR          0x292D32
+#define SIDE_VIEW_ETCH_DARK_COLOR           0x1D1B21
+
+
 
 
 #import <Foundation/Foundation.h>

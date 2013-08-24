@@ -7,10 +7,12 @@
 //
 
 #import "OtAppDelegate.h"
-
+#import "MFSideMenuContainerViewController.h"
 #import "OtMasterViewCtrl.h"
 
 @implementation OtAppDelegate
+
+@synthesize window;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -41,20 +43,18 @@
     }
     
     // set root controller
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
+    UIViewController *sideMenuViewCtrl = [storyboard instantiateViewControllerWithIdentifier:@"OtSideMenuViewController"];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *userId = (NSString *)[defaults valueForKey:OT_USER_ID];
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:navigationController
+                                                    leftMenuViewController:sideMenuViewCtrl
+                                                    rightMenuViewController:nil];
+    [container setMenuSlideAnimationEnabled:YES];
+    [container setMenuSlideAnimationFactor:5.0f];
     
-    if(userId == nil || [userId isEqualToString:@""])
-    {
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"OtWelcomeNavigationCtrl"];
-    }
-    else
-    {
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
-    }
-    
+    self.window.rootViewController = container;
     [self.window makeKeyAndVisible];
     return YES;
 }
