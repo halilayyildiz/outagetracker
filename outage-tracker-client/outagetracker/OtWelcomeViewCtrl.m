@@ -6,9 +6,8 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import "MFSideMenuContainerViewController.h"
 #import "OtUtils.h"
+#import "OtAppDelegate.h"
 #import "OtWelcomeViewCtrl.h"
 #import "OtOutageClient.h"
 #import "OtOutageClientProtocol.h"
@@ -46,6 +45,12 @@
 //    self.registerButton.layer.borderColor = [UIColor whiteColor].CGColor;
 //    self.registerButton.layer.borderWidth = 0.5f;
 //    self.registerButton.layer.cornerRadius = 10.0f;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.container.panMode = MFSideMenuPanModeNone;
 }
 
 - (void)didReceiveMemoryWarning

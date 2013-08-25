@@ -7,18 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MFSideMenuContainerViewController.h"
 
 @interface OtAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MFSideMenuContainerViewController *container;
 
 @property (nonatomic,retain ) IBOutlet UINavigationController *navCtrl;
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
 
 @end

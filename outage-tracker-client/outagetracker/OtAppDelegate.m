@@ -12,12 +12,6 @@
 
 @implementation OtAppDelegate
 
-@synthesize window;
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
 - (void) clearNotifications {
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
@@ -47,14 +41,14 @@
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
     UIViewController *sideMenuViewCtrl = [storyboard instantiateViewControllerWithIdentifier:@"OtSideMenuViewController"];
     
-    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
-                                                    containerWithCenterViewController:navigationController
+    self.container = [MFSideMenuContainerViewController containerWithCenterViewController:navigationController
                                                     leftMenuViewController:sideMenuViewCtrl
                                                     rightMenuViewController:nil];
-    [container setMenuSlideAnimationEnabled:YES];
-    [container setMenuSlideAnimationFactor:5.0f];
     
-    self.window.rootViewController = container;
+    [self.container setMenuSlideAnimationEnabled:YES];
+    [self.container setMenuSlideAnimationFactor:2.0f];
+    
+    self.window.rootViewController = self.container;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -88,25 +82,6 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
-}
-
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        } 
-    }
-}
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {

@@ -7,6 +7,7 @@
 //
 
 #import "MFSideMenu.h"
+#import "OtAppDelegate.h"
 #import "OtOutage.h"
 #import "OtMasterViewCtrl.h"
 #import "OtDetailViewCtrl.h"
@@ -48,6 +49,12 @@
     }
     
     [self refreshViewData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.container.panMode = MFSideMenuPanModeDefault;
 }
 
 - (void)didReceiveMemoryWarning
