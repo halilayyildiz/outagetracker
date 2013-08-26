@@ -20,7 +20,7 @@ Development Stack
  - iOS mobile application (iOS 6+)
  - Xcode, Objective-C
  - TestFlight for distributing test application
- - 
+ - ..
 
 - **Server Side**
  - Ruby 2.0.0
