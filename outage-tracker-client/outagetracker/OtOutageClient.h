@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "OtOutageClientProtocol.h"
 
 @interface OtOutageClient : NSObject <OtOutageClientProtocol>

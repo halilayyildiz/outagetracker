@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtUtils.h"
 #import "OtAppDelegate.h"
 #import "OtWelcomeViewCtrl.h"
 #import "OtOutageClient.h"
@@ -39,12 +38,15 @@
     
     // set styles
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    self.billImage.layer.cornerRadius = 4.0f;
+    self.installationIdTextField.layer.cornerRadius = 4.0f;
+    self.registerButton.layer.cornerRadius = 4.0f;
     
-//    [self.registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    self.registerButton.backgroundColor = UIColorFromRGB(FGCOLOR);
-//    self.registerButton.layer.borderColor = [UIColor whiteColor].CGColor;
-//    self.registerButton.layer.borderWidth = 0.5f;
-//    self.registerButton.layer.cornerRadius = 10.0f;
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    self.installationIdTextField.leftView = paddingView;
+    self.installationIdTextField.leftViewMode = UITextFieldViewModeAlways;
+    
+//    [self.registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -59,6 +61,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleTap:(UITapGestureRecognizer *)recognizer
+{
+    [self.view endEditing:YES];
+}
+
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     return NO;
@@ -68,7 +75,7 @@
 - (IBAction)registerUser:(UIButton *)sender
 {
     id<OtOutageClientProtocol> outageClient = [[OtOutageClient alloc] init];
-    NSString *installationId = self.installationId.text;
+    NSString *installationId = self.installationIdTextField.text;
     
     [MBProgressHUD showHUDAddedTo:self.tableView  animated:YES];
     
@@ -95,10 +102,6 @@
     }]; 
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)recognizer
-{
-    NSLog(@"tap began");
-    [self.view endEditing:YES];
-}
+
 
 @end

@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtUtils.h"
 #import "OtOutage.h"
 #import "OtOutageClient.h"
 #import "AFNetworking.h"

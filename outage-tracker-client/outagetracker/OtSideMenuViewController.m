@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import "OtUtils.h"
 #import "OtSideMenuViewController.h"
 #import "OtMasterViewCtrl.h"
 #import "OtSettingsViewCtrl.h"
@@ -49,22 +47,22 @@
     if (clickedCell == self.navigateToOutagesCell)
     {
         targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtMasterViewCtrl"];
-        targetViewController.title = @"Outages";  
+//        targetViewController.title = @"Outages";  
     }
     else if (clickedCell == self.navigateToClaimOutageCell)
     {
-        targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtMasterViewCtrl"];
-        targetViewController.title = @"Outages";        
+        targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtClaimDisturbanceViewCtrl"];
+//        targetViewController.title = @"Outages";        
     }
     else if (clickedCell == self.navigateToSettingsCell)
     {
         targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtSettingsViewCtrl"];
-        targetViewController.title = @"Settings";        
+//        targetViewController.title = @"Settings";        
     }
     else if (clickedCell == self.navigateToAboutCell)
     {
-        targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtSettingsViewCtrl"];
-        targetViewController.title = @"Outages";        
+        targetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OtAboutViewCtrl"];
+//        targetViewController.title = @"Outages";        
     }
     
     UINavigationController *navigationController = self.menuContainerViewController.centerViewController;

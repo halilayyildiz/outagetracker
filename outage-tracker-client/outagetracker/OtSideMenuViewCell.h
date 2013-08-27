@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 @interface OtSideMenuViewCell : UITableViewCell
 

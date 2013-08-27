@@ -13,7 +13,6 @@
 #import "OtDetailViewCtrl.h"
 #import "OtOutageDataCtrl.h"
 #import "OtSettingsViewCtrl.h"
-#import "OtUtils.h"
 #import "OtMasterViewOutageCell.h"
 
 
@@ -61,6 +60,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showSideMenu:(id)sender
+{
+    [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
 }
 
 
@@ -128,10 +132,6 @@
     }
 }
 
-- (IBAction)showSideMenu:(id)sender
-{
-    [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
-}
 
 -(BOOL)isUserRegistered
 {

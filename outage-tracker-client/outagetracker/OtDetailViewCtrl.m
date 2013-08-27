@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtUtils.h"
+#import "OtAppDelegate.h"
 #import "OtDetailViewCtrl.h"
 #import "OtOutage.h"
 
@@ -57,6 +57,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.container.panMode = MFSideMenuPanModeNone;
 }
 
 - (void)didReceiveMemoryWarning

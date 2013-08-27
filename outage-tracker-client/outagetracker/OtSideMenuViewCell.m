@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import "OtUtils.h"
 #import "OtSideMenuViewCell.h"
 
 @implementation OtSideMenuViewCell

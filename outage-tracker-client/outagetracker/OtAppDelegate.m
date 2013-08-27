@@ -39,14 +39,14 @@
     // set root controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
-    UIViewController *sideMenuViewCtrl = [storyboard instantiateViewControllerWithIdentifier:@"OtSideMenuViewController"];
+    UIViewController *sideMenuViewCtrl = [storyboard instantiateViewControllerWithIdentifier:@"OtSideMenuViewCtrl"];
     
     self.container = [MFSideMenuContainerViewController containerWithCenterViewController:navigationController
                                                     leftMenuViewController:sideMenuViewCtrl
                                                     rightMenuViewController:nil];
     
     [self.container setMenuSlideAnimationEnabled:YES];
-    [self.container setMenuSlideAnimationFactor:2.0f];
+    [self.container setMenuSlideAnimationFactor:6.0f];
     
     self.window.rootViewController = self.container;
     [self.window makeKeyAndVisible];

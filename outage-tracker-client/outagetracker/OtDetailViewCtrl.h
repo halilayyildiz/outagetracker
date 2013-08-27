@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class OtOutage;
 
 @interface OtDetailViewCtrl : UITableViewController

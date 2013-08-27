@@ -25,6 +25,8 @@
 		A93D2A5217B81E1A00B23A2E /* ot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A93D2A4F17B81E1A00B23A2E /* ot-icon.png */; };
 		A93F0473179C4BC60053CFAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */; };
 		A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */; };
+		A968C1A517CD195200723AA3 /* OtAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A968C1A417CD195200723AA3 /* OtAboutViewController.m */; };
+		A968C1AE17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A968C1AD17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m */; };
 		A9A95CC917B5C5EC005F557D /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CB717B5C5EC005F557D /* AFHTTPClient.m */; };
 		A9A95CCA17B5C5EC005F557D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CB917B5C5EC005F557D /* AFHTTPRequestOperation.m */; };
 		A9A95CCB17B5C5EC005F557D /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A95CBB17B5C5EC005F557D /* AFImageRequestOperation.m */; };
@@ -101,6 +103,10 @@
 		A93F0472179C4BC60053CFAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
 		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
+		A968C1A317CD195200723AA3 /* OtAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtAboutViewController.h; sourceTree = "<group>"; };
+		A968C1A417CD195200723AA3 /* OtAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtAboutViewController.m; sourceTree = "<group>"; };
+		A968C1AC17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtClaimDisturbanceViewCtrl.h; sourceTree = "<group>"; };
+		A968C1AD17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtClaimDisturbanceViewCtrl.m; sourceTree = "<group>"; };
 		A9A95C9317B5B685005F557D /* OtConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtConstants.h; sourceTree = "<group>"; };
 		A9A95CB617B5C5EC005F557D /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		A9A95CB717B5C5EC005F557D /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -233,6 +239,59 @@
 				A93D2A4B17B81DDC00B23A2E /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		A968C1A617CD25DE00723AA3 /* outages */ = {
+			isa = PBXGroup;
+			children = (
+				A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */,
+				A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */,
+				A9F5D236179B36590018FB60 /* OtMasterViewCtrl.h */,
+				A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */,
+				A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */,
+				A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */,
+				A9F5D239179B36590018FB60 /* OtDetailViewCtrl.h */,
+				A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */,
+			);
+			name = outages;
+			sourceTree = "<group>";
+		};
+		A968C1A717CD25ED00723AA3 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */,
+				A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		A968C1A817CD25F400723AA3 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				A968C1A317CD195200723AA3 /* OtAboutViewController.h */,
+				A968C1A417CD195200723AA3 /* OtAboutViewController.m */,
+			);
+			name = about;
+			sourceTree = "<group>";
+		};
+		A968C1AA17CD262B00723AA3 /* claimdisturbance */ = {
+			isa = PBXGroup;
+			children = (
+				A968C1AC17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.h */,
+				A968C1AD17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m */,
+			);
+			name = claimdisturbance;
+			sourceTree = "<group>";
+		};
+		A968C1AB17CD263D00723AA3 /* sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				A92BC32A17C9013700A7016A /* OtSideMenuViewController.h */,
+				A92BC32B17C9013700A7016A /* OtSideMenuViewController.m */,
+				A92BC34917C93B8100A7016A /* OtSideMenuViewCell.h */,
+				A92BC34A17C93B8100A7016A /* OtSideMenuViewCell.m */,
+			);
+			name = sidemenu;
 			sourceTree = "<group>";
 		};
 		A9A95CB517B5C5EB005F557D /* AFNetworking */ = {
@@ -380,20 +439,11 @@
 		A9F5D264179B62970018FB60 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A9F5D236179B36590018FB60 /* OtMasterViewCtrl.h */,
-				A9F5D237179B36590018FB60 /* OtMasterViewCtrl.m */,
-				A9FA1A2B17ADB202009F63D7 /* OtMasterViewOutageCell.h */,
-				A9FA1A2C17ADB202009F63D7 /* OtMasterViewOutageCell.m */,
-				A9F5D239179B36590018FB60 /* OtDetailViewCtrl.h */,
-				A9F5D23A179B36590018FB60 /* OtDetailViewCtrl.m */,
-				A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */,
-				A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */,
-				A92BC32A17C9013700A7016A /* OtSideMenuViewController.h */,
-				A92BC32B17C9013700A7016A /* OtSideMenuViewController.m */,
-				A92BC34917C93B8100A7016A /* OtSideMenuViewCell.h */,
-				A92BC34A17C93B8100A7016A /* OtSideMenuViewCell.m */,
-				A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */,
-				A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */,
+				A968C1A817CD25F400723AA3 /* about */,
+				A968C1AA17CD262B00723AA3 /* claimdisturbance */,
+				A968C1A617CD25DE00723AA3 /* outages */,
+				A968C1A717CD25ED00723AA3 /* settings */,
+				A968C1AB17CD263D00723AA3 /* sidemenu */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -580,6 +630,8 @@
 				A9BE91F517C7E56600D1517D /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				A92BC32C17C9013700A7016A /* OtSideMenuViewController.m in Sources */,
 				A92BC34B17C93B8200A7016A /* OtSideMenuViewCell.m in Sources */,
+				A968C1A517CD195200723AA3 /* OtAboutViewController.m in Sources */,
+				A968C1AE17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

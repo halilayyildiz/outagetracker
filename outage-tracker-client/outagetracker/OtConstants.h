@@ -22,6 +22,7 @@
 
 #define OT_USER_ID                          @"otUserId"
 #define OT_INST_ID                          @"otInstallationId"
+#define OT_LANG                             @"otLanguage"
 #define OT_PUSH_TOKEN                       @"otPushToken"
 
 #define BGCOLOR                             0xD0D5DE

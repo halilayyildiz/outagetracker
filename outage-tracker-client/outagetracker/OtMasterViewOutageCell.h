@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface OtMasterViewOutageCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *description;

@@ -6,14 +6,13 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface OtSettingsViewCtrl : UITableViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *userId;
-@property (strong, nonatomic) IBOutlet UITextField *installationId;
-@property (strong, nonatomic) IBOutlet UITextField *appVersion;
+@property (strong, nonatomic) IBOutlet UILabel *language;
+@property (strong, nonatomic) IBOutlet UILabel *userId;
+@property (strong, nonatomic) IBOutlet UILabel *installationId;
 
 -(IBAction)showSideMenu:(id)sender;
+-(IBAction)changeLanguage:(UITextField *)sender;
 
 @end
