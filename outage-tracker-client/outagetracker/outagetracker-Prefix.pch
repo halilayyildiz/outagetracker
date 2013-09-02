@@ -17,4 +17,5 @@
     #import <CoreData/CoreData.h>
     #import "OtConstants.h"
     #import "OtUtils.h"
+    #import "LocalizationSystem.h"
 #endif

@@ -35,6 +35,12 @@
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.tableView addGestureRecognizer:tap];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.container.panMode = MFSideMenuPanModeNone;
     
     // set styles
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
@@ -46,13 +52,7 @@
     self.installationIdTextField.leftView = paddingView;
     self.installationIdTextField.leftViewMode = UITextFieldViewModeAlways;
     
-//    [self.registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
-    appDelegate.container.panMode = MFSideMenuPanModeNone;
+    //    [self.registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning

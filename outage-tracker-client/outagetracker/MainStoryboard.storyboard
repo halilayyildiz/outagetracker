@@ -11,6 +11,7 @@
                     <navigationItem key="navigationItem" id="MWg-nR-aYR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRK-WD-aWZ">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" red="0.086274512110000007" green="0.70588237050000002" blue="0.72941178080000002" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
@@ -458,8 +459,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="approveButton" destination="pVI-37-Vk0" id="2fM-UF-N1r"/>
-                        <outlet property="messageLabel" destination="8au-2S-g4V" id="erW-vJ-dR2"/>
+                        <outlet property="approveButton" destination="pVI-37-Vk0" id="v4z-WD-hnC"/>
+                        <outlet property="claimDisturbanceNotice" destination="8au-2S-g4V" id="0gF-SL-LIX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7W7-xk-XUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -580,7 +581,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="329-SH-Zs7" kind="push" id="q0F-FW-3ed"/>
+                                            <segue destination="329-SH-Zs7" kind="push" identifier="showChangeLanguageView" id="q0F-FW-3ed"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -646,6 +647,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="installationId" destination="KE0-L8-H3U" id="X4N-lQ-AoH"/>
+                        <outlet property="language" destination="QDh-Id-hoy" id="t4r-vH-UEW"/>
                         <outlet property="userId" destination="YtO-BB-PXd" id="sie-wz-UJ5"/>
                     </connections>
                 </tableViewController>
@@ -653,25 +655,25 @@
             </objects>
             <point key="canvasLocation" x="391" y="870"/>
         </scene>
-        <!--Table View Controller - Language-->
+        <!--Ot Language View Ctrl - Language-->
         <scene sceneID="Xfu-s7-YZk">
             <objects>
-                <tableViewController storyboardIdentifier="OtLanguageViewCtrl" id="329-SH-Zs7" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OtLanguageViewCtrl" id="329-SH-Zs7" customClass="OtLanguageViewCtrl" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mAS-Zk-210">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="OuY-Bd-dvZ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BqW-EC-DCe">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="languageCell" id="BqW-EC-DCe">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="English" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIB-qX-CIP">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="English" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIB-qX-CIP">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="R0T-54-TiH"/>
                                                     </constraints>
@@ -687,14 +689,14 @@
                                             <constraint firstItem="sIB-qX-CIP" firstAttribute="top" secondItem="BqW-EC-DCe" secondAttribute="top" constant="12" id="q7A-fI-H36"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sH6-xB-y9a">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="languageCell" id="sH6-xB-y9a">
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Turkish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RM-gA-lQh">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="Turkish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RM-gA-lQh">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="6hp-HQ-tx6"/>
                                                     </constraints>
@@ -719,8 +721,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Language" id="FbS-pg-W5F"/>
+                    <connections>
+                        <segue destination="VZE-oM-UFw" kind="unwind" identifier="backToSettingsViewAfterLanguageChanged" unwindAction="languageChanged:" id="EiB-AR-lP0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRO-UG-lyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VZE-oM-UFw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="880" y="870"/>
         </scene>
@@ -845,8 +851,8 @@
                     <navigationItem key="navigationItem" title="Welcome" id="8II-RH-QZH"/>
                     <connections>
                         <outlet property="billImage" destination="yak-uo-Ttv" id="JbQ-Rg-OAc"/>
-                        <outlet property="installationIdTextField" destination="JU8-W0-xeW" id="hnp-Gv-iyH"/>
-                        <outlet property="registerButton" destination="akT-Tn-86U" id="9zi-wb-52w"/>
+                        <outlet property="installationIdTextField" destination="JU8-W0-xeW" id="xEW-mC-jba"/>
+                        <outlet property="registerButton" destination="akT-Tn-86U" id="3qZ-7y-PXs"/>
                         <segue destination="noa-GX-fUq" kind="unwind" identifier="backToMainViewAfterRegistration" unwindAction="userRegistrationCompleted:" id="Lny-3e-ET2"/>
                     </connections>
                 </tableViewController>
@@ -1049,7 +1055,7 @@
                 <relationship kind="action" name="claimDisturbance:" candidateClass="UIButton"/>
                 <relationship kind="action" name="showSideMenu:"/>
                 <relationship kind="outlet" name="approveButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="claimDisturbanceNotice" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="OtDetailViewCtrl" superclassName="UITableViewController">
@@ -1062,6 +1068,9 @@
                 <relationship kind="outlet" name="numOfAffCustomers" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="startDateLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="OtLanguageViewCtrl" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OtLanguageViewCtrl.h"/>
         </class>
         <class className="OtMasterViewCtrl" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtMasterViewCtrl.h"/>
@@ -1083,6 +1092,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtSettingsViewCtrl.h"/>
             <relationships>
                 <relationship kind="action" name="changeLanguage:" candidateClass="UITextField"/>
+                <relationship kind="action" name="languageChanged:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="languageSaved:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="showSideMenu:"/>
                 <relationship kind="outlet" name="installationId" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="language" candidateClass="UILabel"/>

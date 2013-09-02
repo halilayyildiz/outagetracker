@@ -13,6 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *installationId;
 
 -(IBAction)showSideMenu:(id)sender;
--(IBAction)changeLanguage:(UITextField *)sender;
+-(IBAction)languageChanged:(UIStoryboardSegue *)unwindSegue;
 
 @end

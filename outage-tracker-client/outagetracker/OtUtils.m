@@ -48,4 +48,28 @@
     return [formatter dateFromString:dateString];
 }
 
++ (NSString *)getLangCode:(NSString *) language
+{
+    if ([language isEqualToString:@"English"])
+    {
+        return @"en";
+    }
+    else if ([language isEqualToString:@"Turkish"])
+    {
+        return @"tr";
+    }
+    else if ([language isEqualToString:@"İngilizce"])
+    {
+        return @"en";
+    }
+    else if ([language isEqualToString:@"Türkçe"])
+    {
+        return @"tr";
+    }
+    else
+    {
+        return @"en";
+    }
+}
+
 @end

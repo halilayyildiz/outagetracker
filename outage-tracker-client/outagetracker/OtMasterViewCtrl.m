@@ -97,11 +97,13 @@
     [[cell startDate] setText:[OtUtils formatDate:outageAtIndex.startDate]];
     [[cell duration] setText:[OtUtils durationBetweenDate:outageAtIndex.startDate andDate:outageAtIndex.endDate]];
     [[cell numOfAffectedCustomers] setText:[NSString stringWithFormat:@"%d", outageAtIndex.numOfAffectedCustomers]];
-    
-//    cell.contentView.backgroundColor = UIColorFromRGB(0xFFFFFF);
-    
-    
+
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -131,7 +133,6 @@
         detailViewController.outage = [self.dataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
-
 
 -(BOOL)isUserRegistered
 {

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "OtSideMenuViewController.h"
+#import "OtSideMenuViewCtrl.h"
 #import "OtMasterViewCtrl.h"
 #import "OtSettingsViewCtrl.h"
 

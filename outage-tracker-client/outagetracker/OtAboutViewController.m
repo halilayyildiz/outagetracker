@@ -44,6 +44,10 @@
 {
     OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
+    
+    // set styles
+    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    self.tableView.backgroundView = nil;
 }
 
 - (void)didReceiveMemoryWarning

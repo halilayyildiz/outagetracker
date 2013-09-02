@@ -36,6 +36,19 @@
         }
     }
     
+    // load language
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *lang = [defaults valueForKey:OT_LANG];
+    if (lang == nil) {
+        [defaults setObject:@"English" forKey:OT_LANG];
+        [defaults synchronize];
+        LocalizationSetLanguage([OtUtils getLangCode:@"English"]);
+    }else
+    {
+        LocalizationSetLanguage([OtUtils getLangCode:lang]);
+    }
+    
+    
     // set root controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
@@ -45,8 +58,8 @@
                                                     leftMenuViewController:sideMenuViewCtrl
                                                     rightMenuViewController:nil];
     
-    [self.container setMenuSlideAnimationEnabled:YES];
-    [self.container setMenuSlideAnimationFactor:6.0f];
+//    [self.container setMenuSlideAnimationEnabled:YES];
+//    [self.container setMenuSlideAnimationFactor:6.0f];
     
     self.window.rootViewController = self.container;
     [self.window makeKeyAndVisible];

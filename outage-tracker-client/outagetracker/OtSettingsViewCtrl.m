@@ -31,10 +31,18 @@
     [super viewDidLoad];
     
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tap.cancelsTouchesInView = false;
     [self.tableView addGestureRecognizer:tap];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.container.panMode = MFSideMenuPanModeDefault;
     
     // set styles
     self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    self.tableView.backgroundView = nil;
     
     // load user settings
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -47,16 +55,15 @@
     self.language.text = lang;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
-    appDelegate.container.panMode = MFSideMenuPanModeDefault;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (IBAction)showSideMenu:(id)sender
@@ -86,11 +93,9 @@
 //    }
 //}
 
--(IBAction)changeLanguage:(UITextField *)sender
+- (IBAction)languageChanged:(UIStoryboardSegue *)unwindSegue
 {
-
-
-
+    NSLog(@"Language Changed Complete.");
 }
 
 

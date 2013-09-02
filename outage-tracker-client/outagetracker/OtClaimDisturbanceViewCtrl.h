@@ -10,7 +10,7 @@
 @interface OtClaimDisturbanceViewCtrl : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *approveButton;
-@property (strong, nonatomic) IBOutlet UILabel *messageLabel;
+@property (strong, nonatomic) IBOutlet UILabel *claimDisturbanceNotice;
 
 -(IBAction)showSideMenu:(id)sender;
 -(IBAction)claimDisturbance:(UIButton *)sender;

@@ -28,17 +28,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-    self.approveButton.layer.cornerRadius = 4;
-    self.messageLabel.layer.cornerRadius = 4;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
+
+    // set texts
+    self.approveButton.titleLabel.text = AMLocalizedString(@"claimdisturbance.approve", @"Approve");
+    self.claimDisturbanceNotice.text = AMLocalizedString(@"claimdisturbance.notice", @"Yep, I have a disturbance");
+    
+    // set styles
+    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+    self.approveButton.layer.cornerRadius = 4;
+    self.claimDisturbanceNotice.layer.cornerRadius = 4;
+    self.claimDisturbanceNotice.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)didReceiveMemoryWarning
