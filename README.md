@@ -12,6 +12,7 @@ Features
 - Settings page to change user information
 - Reminder (or local notification) for planned outages
 - Calendar view for outages
+- Multi-language support: English, Turkish
 
 
 Development Stack
