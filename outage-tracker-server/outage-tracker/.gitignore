@@ -47,3 +47,8 @@ pickle-email-*.html
 *.iws
 .idea/
 
+### Sensitive Data ###
+*.pem
+*.p12
+
+
