@@ -40,7 +40,7 @@
     NSString *lang = [defaults valueForKey:OT_LANG];
     if (lang == nil)
     {
-        [defaults setObject:@"English" forKey:OT_LANG];
+        [defaults setObject:@"Turkish" forKey:OT_LANG];
         [defaults synchronize];
         LocalizationSetLanguage([OtUtils getLangCode:@"Turkish"]);
     }
@@ -48,6 +48,9 @@
     {
         LocalizationSetLanguage([OtUtils getLangCode:lang]);
     }
+    
+    // set view attributes
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(NAV_BAR_TINT_COLOR)];
     
     
     // set root controller

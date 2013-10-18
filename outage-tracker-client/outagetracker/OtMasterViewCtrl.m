@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.tintColor = [UIColor whiteColor];
@@ -54,9 +54,6 @@
 {
     OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
-    
-//    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
-    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(NAV_BAR_TINT_COLOR)];
 }
 
 - (void)didReceiveMemoryWarning

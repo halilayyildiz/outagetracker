@@ -30,7 +30,7 @@
 #define SIDE_VIEW_BG_COLOR                  0x454548
 #define SIDE_VIEW_ETCH_LIGHT_COLOR          0x515151
 #define SIDE_VIEW_ETCH_DARK_COLOR           0x393939
-#define NAV_BAR_TINT_COLOR                  0xE5E5E5
+#define NAV_BAR_TINT_COLOR                  0xEFEFEF
 
 
 
