@@ -48,11 +48,12 @@
 
 - (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete
 {
-    //TODO
-    
-    
-    
-    
+    // TODO
+}
+
+- (void) registerNewTroubleCall:(NSString *)installationId notify:(void (^)(void))onComplete;
+{
+    // TODO
 }
 
 @end

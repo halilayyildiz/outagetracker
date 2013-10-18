@@ -15,6 +15,5 @@
 
 -(IBAction)showSideMenu:(id)sender;
 -(IBAction)claimDisturbance:(UIButton *)sender;
--(IBAction)changeHouseImage:(UIButton *)sender;
 
 @end

@@ -16,6 +16,8 @@
 
 #define API_HTTP_PREFIX                     @"http://"
 #define API_ALL_OUTAGES_PATH                @"/api/outage/all"
+#define API_NEW_TCALL_PATH                  @"/api/outage/tcall"
+#define API_NEW_TCALL_PARAM_INST            @"inst_id"
 #define API_REGISTER_USER_PATH              @"/api/user/register"
 #define API_REGISTER_USER_PARAM_INST        @"inst_id"
 #define API_REGISTER_USER_PARAM_PUSH        @"push_id"

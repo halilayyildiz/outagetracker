@@ -10,7 +10,7 @@
 @protocol OtOutageClientProtocol <NSObject>
 
 - (void) getOutages:(void (^)(NSMutableArray *outages))onCompleteSend;
-
 - (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete;
+- (void) registerNewTroubleCall:(NSString *)installationId notify:(void (^)(void))onComplete;
 
 @end

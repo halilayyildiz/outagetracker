@@ -53,6 +53,7 @@
 		A9ABE85B17D51FEB00C33EA8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ABE85A17D51FEB00C33EA8 /* MainStoryboard.storyboard */; };
 		A9BE91F717C7E5CB00D1517D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BE91F617C7E5CB00D1517D /* QuartzCore.framework */; };
 		A9CC32991811C9BB00257C1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CC32981811C9BB00257C1E /* MapKit.framework */; };
+		A9CC329C1811E77600257C1E /* OtAlertViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CC329B1811E77600257C1E /* OtAlertViewDelegate.m */; };
 		A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
 		A9F5D219179B36590018FB60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D218179B36590018FB60 /* Foundation.framework */; };
@@ -161,6 +162,8 @@
 		A9ABE85A17D51FEB00C33EA8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A9BE91F617C7E5CB00D1517D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A9CC32981811C9BB00257C1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A9CC329A1811E77600257C1E /* OtAlertViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtAlertViewDelegate.h; sourceTree = "<group>"; };
+		A9CC329B1811E77600257C1E /* OtAlertViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtAlertViewDelegate.m; sourceTree = "<group>"; };
 		A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtWelcomeViewCtrl.h; sourceTree = "<group>"; };
 		A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtWelcomeViewCtrl.m; sourceTree = "<group>"; };
 		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -516,6 +519,8 @@
 				A9A95C9317B5B685005F557D /* OtConstants.h */,
 				A9FA1A2817ADAE56009F63D7 /* OtUtils.h */,
 				A9FA1A2917ADAE56009F63D7 /* OtUtils.m */,
+				A9CC329A1811E77600257C1E /* OtAlertViewDelegate.h */,
+				A9CC329B1811E77600257C1E /* OtAlertViewDelegate.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -656,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F5D225179B36590018FB60 /* main.m in Sources */,
+				A9CC329C1811E77600257C1E /* OtAlertViewDelegate.m in Sources */,
 				A9F5D229179B36590018FB60 /* OtAppDelegate.m in Sources */,
 				A9F5D238179B36590018FB60 /* OtMasterViewCtrl.m in Sources */,
 				A9F5D23B179B36590018FB60 /* OtDetailViewCtrl.m in Sources */,

@@ -73,6 +73,31 @@
     [operation start];
 }
 
+- (void) registerNewTroubleCall:(NSString *)installationId notify:(void (^)(void))onComplete;
+{
+    // prepare url string
+    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_NEW_TCALL_PATH];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSDictionary *params = @{API_NEW_TCALL_PARAM_INST: installationId, API_REGISTER_USER_PARAM_PUSH: [self getDeviceToken]};
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:urlStr parameters:params];
+    
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+      success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+     {
+         onComplete();
+     }
+      failure:^(NSURLRequest *request , NSURLResponse *response , NSError *error , id JSON)
+     {
+         NSLog(@"New trouble call submit FAILED: %@",[error localizedDescription]);
+         onComplete();
+     }];
+    
+    [operation start];
+}
+
 - (NSMutableArray *)parseOutage:(NSArray *)outagesJSON
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];

@@ -9,6 +9,8 @@
 #import "MFSideMenu.h"
 #import "OtAppDelegate.h"
 #import "OtClaimDisturbanceViewCtrl.h"
+#import "OtOutageClient.h"
+#import "OtAlertViewDelegate.h"
 
 @interface OtClaimDisturbanceViewCtrl ()
 
@@ -55,18 +57,41 @@
 
 -(IBAction)claimDisturbance:(UIButton *)sender
 {
-    // TODO
-    
-    
-    
-    
-}
-
--(IBAction)changeHouseImage:(UIButton *)sender
-{
     bool hasDisturbance = [[NSUserDefaults standardUserDefaults] boolForKey:OT_HAS_DISTURBANCE];
     [[NSUserDefaults standardUserDefaults] setBool:!hasDisturbance forKey:OT_HAS_DISTURBANCE];
     [self setHouseImage:!hasDisturbance];
+    
+    // create new trouble call if user has disturbance
+    if(!hasDisturbance)
+    {
+        // alert for confirmation
+        UIAlertView *av1 = [[UIAlertView alloc] initWithTitle:@"Onay" message:@"Elektiriginizin kesik olduguna dair bildirim olusturulacak, onayliyor musunuz ?" delegate:self cancelButtonTitle:@"Iptal" otherButtonTitles:@"Evet", nil];
+        [OtAlertViewDelegate showAlertView:av1 withCallback:^(NSInteger buttonIndex)
+        {
+            if(buttonIndex == 0)
+            {
+                NSLog(@"Trouble call NOT submitted");
+            }
+            else
+            {
+                // if confirmed, then create submit trouble call
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                NSString *inst_id = [defaults valueForKey:OT_INST_ID];
+                if (inst_id != nil)
+                {
+                    id<OtOutageClientProtocol> outageClient = [[OtOutageClient alloc] init];
+                    [outageClient registerNewTroubleCall:inst_id notify:^()
+                     {
+                         NSLog(@"Trouble call submitted");
+                         // show alert for operation is complete
+                         UIAlertView *av2 = [[UIAlertView alloc] initWithTitle:@"Sonuç" message:@"Bildiriminiz iletildi."
+                                                                      delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                         [av2 show];
+                     }];
+                }
+            }
+        }];
+    }
 }
 
 -(void)setHouseImage:(bool)hasDisturbance

@@ -8,7 +8,8 @@ OutageTracker::Application.routes.draw do
   get   'api/notification/new'                   =>    'api/notification#new'
   get   'api/notification/message/:id'           =>    'api/notification#message'
   get   'api/notification/message2/:id'          =>    'api/notification#message2'
-  get   'api/outage/all'                         =>    'api/outage#index'
+  get   'api/outage/all'                         =>    'api/outage#list'
+  get   'api/outage/tcall'                       =>    'api/outage#tcall'
   post  'api/user/register'                      =>    'api/user#register'
 
   resources :outages
