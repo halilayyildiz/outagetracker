@@ -52,7 +52,6 @@
     // set view attributes
     [[UINavigationBar appearance] setTintColor:UIColorFromRGB(NAV_BAR_TINT_COLOR)];
     
-    
     // set root controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMasterNavigationCtrl"];

@@ -12,6 +12,8 @@
 
 @interface OtClaimDisturbanceViewCtrl ()
 
+-(void)setHouseImage:(bool)hasDisturbance;
+
 @end
 
 @implementation OtClaimDisturbanceViewCtrl
@@ -30,11 +32,14 @@
 //    self.approveButton.titleLabel.text = AMLocalizedString(@"claimdisturbance.approve", @"Approve");
 //    self.claimDisturbanceNotice.text = AMLocalizedString(@"claimdisturbance.notice", @"Yep, I have a disturbance");
     
-    // set styles
-//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-//    self.approveButton.layer.cornerRadius = 4;
-    self.claimDisturbanceNotice.layer.cornerRadius = 6;
+    self.claimDisturbanceNotice.layer.cornerRadius = 6.0f;
     self.claimDisturbanceNotice.textAlignment = NSTextAlignmentCenter;
+    self.houseImageButton.layer.cornerRadius = 6.0f;
+    self.houseImageButton.clipsToBounds = YES;
+    
+    // set house image
+    bool hasDisturbance = [[NSUserDefaults standardUserDefaults] boolForKey:OT_HAS_DISTURBANCE];
+    [self setHouseImage:hasDisturbance];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +60,27 @@
     
     
     
+}
+
+-(IBAction)changeHouseImage:(UIButton *)sender
+{
+    bool hasDisturbance = [[NSUserDefaults standardUserDefaults] boolForKey:OT_HAS_DISTURBANCE];
+    [[NSUserDefaults standardUserDefaults] setBool:!hasDisturbance forKey:OT_HAS_DISTURBANCE];
+    [self setHouseImage:!hasDisturbance];
+}
+
+-(void)setHouseImage:(bool)hasDisturbance
+{
+    if(hasDisturbance)
+    {
+        UIImage *buttonImage = [UIImage imageNamed:@"house-light-no.jpg"];
+        [self.houseImageButton setImage:buttonImage forState:UIControlStateNormal];
+    }
+    else
+    {
+        UIImage *buttonImage = [UIImage imageNamed:@"house-light-yes.jpg"];
+        [self.houseImageButton setImage:buttonImage forState:UIControlStateNormal];
+    }
 }
 
 

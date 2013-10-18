@@ -24,6 +24,7 @@
 #define OT_INST_ID                          @"otInstallationId"
 #define OT_LANG                             @"otLanguage"
 #define OT_PUSH_TOKEN                       @"otPushToken"
+#define OT_HAS_DISTURBANCE                  @"otHasDisturbance"
 
 #define BGCOLOR                             0xD0D5DE
 #define FGCOLOR                             0x30AEB3

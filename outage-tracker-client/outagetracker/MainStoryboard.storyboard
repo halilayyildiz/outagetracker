@@ -395,28 +395,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnJ-hH-Bzw">
-                                <rect key="frame" x="20" y="85" width="280" height="220"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eger su anda elektriginiz yoksa, buradan sisteme bildirim olusturabilirsiniz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Pfs-Ay-xGN">
-                                <rect key="frame" x="20" y="313" width="280" height="102"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eger elektriginiz kesikse lutfen yukardaki resme tiklayarak bu durumu sisteme bildiriniz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Pfs-Ay-xGN">
+                                <rect key="frame" x="20" y="325" width="280" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.87020131740666207" blue="0.15269591490347267" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23913634950248752" green="0.23913634950248752" blue="0.23913634950248752" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOZ-uD-7DV">
-                                <rect key="frame" x="20" y="431" width="280" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFx-qo-7eN">
+                                <rect key="frame" x="20" y="85" width="280" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Bildirim Olustur">
-                                    <color key="titleColor" red="0.0" green="0.69084266169999997" blue="0.69084266169999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="house-light-yes.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="claimDisturbance:" destination="d5f-AA-8Wk" eventType="touchUpInside" id="4NC-NT-tH5"/>
+                                    <action selector="changeHouseImage:" destination="d5f-AA-8Wk" eventType="touchUpInside" id="8cH-NZ-v1B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -431,8 +426,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="approveButton" destination="fOZ-uD-7DV" id="5hZ-qt-lsc"/>
                         <outlet property="claimDisturbanceNotice" destination="Pfs-Ay-xGN" id="2Bs-7N-i1L"/>
+                        <outlet property="houseImageButton" destination="BFx-qo-7eN" id="M3f-vQ-dxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sba-u3-wfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -984,10 +979,10 @@
                                                         <constraint firstAttribute="width" constant="24" id="yVy-dz-rON"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Hakkında" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-1j-zJX">
-                                                    <rect key="frame" x="52" y="11" width="248" height="22"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Hakkında" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9M-Ke-FvI">
+                                                    <rect key="frame" x="52" y="11" width="194" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="SBg-v4-x3z"/>
+                                                        <constraint firstAttribute="height" constant="21" id="jFV-Op-GKj"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -997,10 +992,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.03529411927" green="0.086274512110000007" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
-                                            <constraint firstItem="J0j-1j-zJX" firstAttribute="leading" secondItem="TbR-rY-siY" secondAttribute="trailing" constant="8" symbolic="YES" id="06n-yl-3UG"/>
-                                            <constraint firstItem="J0j-1j-zJX" firstAttribute="top" secondItem="vNc-Tr-vUY" secondAttribute="top" constant="11" id="6Vb-F9-kvb"/>
                                             <constraint firstItem="TbR-rY-siY" firstAttribute="leading" secondItem="vNc-Tr-vUY" secondAttribute="leading" constant="20" id="HEe-WN-JPk"/>
-                                            <constraint firstAttribute="trailing" secondItem="J0j-1j-zJX" secondAttribute="trailing" constant="20" id="owW-1W-BP1"/>
                                             <constraint firstItem="TbR-rY-siY" firstAttribute="centerY" secondItem="vNc-Tr-vUY" secondAttribute="centerY" id="uwH-5J-jkf"/>
                                         </constraints>
                                     </tableViewCell>
@@ -1103,6 +1095,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house-light-yes.jpg" width="560" height="440"/>
         <image name="ot-about-icon.png" width="24" height="24"/>
         <image name="ot-bill-example.png" width="590" height="550"/>
         <image name="ot-feedback-icon.png" width="24" height="24"/>

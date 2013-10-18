@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A91BDF351810C7F900F4907D /* ot-icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF321810C7F900F4907D /* ot-icon-58.png */; };
+		A91BDF361810C7F900F4907D /* ot-icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF331810C7F900F4907D /* ot-icon-80.png */; };
+		A91BDF371810C7F900F4907D /* ot-icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF341810C7F900F4907D /* ot-icon-120.png */; };
+		A91BDF3A1810C83B00F4907D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF381810C83B00F4907D /* Default-568h@2x.png */; };
+		A91BDF3B1810C83B00F4907D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF391810C83B00F4907D /* Default@2x.png */; };
+		A91BDF3E1810D9D100F4907D /* house-light-no.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF3C1810D9D100F4907D /* house-light-no.jpg */; };
+		A91BDF3F1810D9D100F4907D /* house-light-yes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A91BDF3D1810D9D100F4907D /* house-light-yes.jpg */; };
 		A92BC32C17C9013700A7016A /* OtSideMenuViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A92BC32B17C9013700A7016A /* OtSideMenuViewCtrl.m */; };
 		A92BC33717C9287F00A7016A /* ot-settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A92BC33517C9287F00A7016A /* ot-settings-icon.png */; };
 		A92BC33817C9287F00A7016A /* ot-settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92BC33617C9287F00A7016A /* ot-settings-icon@2x.png */; };
@@ -20,8 +27,6 @@
 		A92BC34817C932D300A7016A /* ot-menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92BC34617C932D300A7016A /* ot-menu-icon@2x.png */; };
 		A92BC34B17C93B8200A7016A /* OtSideMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92BC34A17C93B8100A7016A /* OtSideMenuViewCell.m */; };
 		A93D2A4817B81DC900B23A2E /* ot-bill-example.png in Resources */ = {isa = PBXBuildFile; fileRef = A93D2A4417B81DC900B23A2E /* ot-bill-example.png */; };
-		A93D2A5117B81E1A00B23A2E /* ot-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A93D2A4E17B81E1A00B23A2E /* ot-icon-retina.png */; };
-		A93D2A5217B81E1A00B23A2E /* ot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A93D2A4F17B81E1A00B23A2E /* ot-icon.png */; };
 		A9487B3F17A48036007246E7 /* OtSettingsViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */; };
 		A968C1A517CD195200723AA3 /* OtAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A968C1A417CD195200723AA3 /* OtAboutViewController.m */; };
 		A968C1AE17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A968C1AD17CD30E800723AA3 /* OtClaimDisturbanceViewCtrl.m */; };
@@ -46,9 +51,6 @@
 		A9ABE85317D5112C00C33EA8 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ABE84417D5112C00C33EA8 /* MFSideMenuShadow.m */; };
 		A9ABE85417D5112C00C33EA8 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ABE84617D5112C00C33EA8 /* UIViewController+MFSideMenuAdditions.m */; };
 		A9ABE85B17D51FEB00C33EA8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ABE85A17D51FEB00C33EA8 /* MainStoryboard.storyboard */; };
-		A9B019BD17CA35EE00E59515 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B019BB17CA34E900E59515 /* Default-568h@2x.png */; };
-		A9B019BF17CA369F00E59515 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B019BE17CA369F00E59515 /* Default@2x.png */; };
-		A9B019C117CA36D700E59515 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B019C017CA36D600E59515 /* Default.png */; };
 		A9BE91F717C7E5CB00D1517D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BE91F617C7E5CB00D1517D /* QuartzCore.framework */; };
 		A9D817F817B6A4CF00D34EFE /* OtWelcomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */; };
 		A9F5D217179B36590018FB60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F5D216179B36590018FB60 /* UIKit.framework */; };
@@ -85,6 +87,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A91BDF321810C7F900F4907D /* ot-icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon-58.png"; path = "images/ot-icon-58.png"; sourceTree = "<group>"; };
+		A91BDF331810C7F900F4907D /* ot-icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon-80.png"; path = "images/ot-icon-80.png"; sourceTree = "<group>"; };
+		A91BDF341810C7F900F4907D /* ot-icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon-120.png"; path = "images/ot-icon-120.png"; sourceTree = "<group>"; };
+		A91BDF381810C83B00F4907D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		A91BDF391810C83B00F4907D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+		A91BDF3C1810D9D100F4907D /* house-light-no.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "house-light-no.jpg"; path = "images/house-light-no.jpg"; sourceTree = "<group>"; };
+		A91BDF3D1810D9D100F4907D /* house-light-yes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "house-light-yes.jpg"; path = "images/house-light-yes.jpg"; sourceTree = "<group>"; };
 		A92BC32A17C9013700A7016A /* OtSideMenuViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSideMenuViewCtrl.h; sourceTree = "<group>"; };
 		A92BC32B17C9013700A7016A /* OtSideMenuViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSideMenuViewCtrl.m; sourceTree = "<group>"; };
 		A92BC33517C9287F00A7016A /* ot-settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-settings-icon.png"; path = "images/ot-settings-icon.png"; sourceTree = "<group>"; };
@@ -100,8 +109,6 @@
 		A92BC34917C93B8100A7016A /* OtSideMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSideMenuViewCell.h; sourceTree = "<group>"; };
 		A92BC34A17C93B8100A7016A /* OtSideMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSideMenuViewCell.m; sourceTree = "<group>"; };
 		A93D2A4417B81DC900B23A2E /* ot-bill-example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-bill-example.png"; path = "images/ot-bill-example.png"; sourceTree = "<group>"; };
-		A93D2A4E17B81E1A00B23A2E /* ot-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon-retina.png"; path = "images/ot-icon-retina.png"; sourceTree = "<group>"; };
-		A93D2A4F17B81E1A00B23A2E /* ot-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ot-icon.png"; path = "images/ot-icon.png"; sourceTree = "<group>"; };
 		A9487B3D17A48036007246E7 /* OtSettingsViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtSettingsViewCtrl.h; sourceTree = "<group>"; };
 		A9487B3E17A48036007246E7 /* OtSettingsViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtSettingsViewCtrl.m; sourceTree = "<group>"; };
 		A968C1A317CD195200723AA3 /* OtAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtAboutViewController.h; sourceTree = "<group>"; };
@@ -151,9 +158,6 @@
 		A9ABE84517D5112C00C33EA8 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
 		A9ABE84617D5112C00C33EA8 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
 		A9ABE85A17D51FEB00C33EA8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A9B019BB17CA34E900E59515 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		A9B019BE17CA369F00E59515 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		A9B019C017CA36D600E59515 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		A9BE91F617C7E5CB00D1517D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtWelcomeViewCtrl.h; sourceTree = "<group>"; };
 		A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtWelcomeViewCtrl.m; sourceTree = "<group>"; };
@@ -225,9 +229,13 @@
 		A925DC09179C423B00C04F42 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				A9B019BB17CA34E900E59515 /* Default-568h@2x.png */,
-				A9B019BE17CA369F00E59515 /* Default@2x.png */,
-				A9B019C017CA36D600E59515 /* Default.png */,
+				A91BDF3C1810D9D100F4907D /* house-light-no.jpg */,
+				A91BDF3D1810D9D100F4907D /* house-light-yes.jpg */,
+				A91BDF381810C83B00F4907D /* Default-568h@2x.png */,
+				A91BDF391810C83B00F4907D /* Default@2x.png */,
+				A91BDF321810C7F900F4907D /* ot-icon-58.png */,
+				A91BDF331810C7F900F4907D /* ot-icon-80.png */,
+				A91BDF341810C7F900F4907D /* ot-icon-120.png */,
 				A92BC34517C932D300A7016A /* ot-menu-icon.png */,
 				A92BC34617C932D300A7016A /* ot-menu-icon@2x.png */,
 				A92BC34117C9319300A7016A /* ot-feedback-icon.png */,
@@ -238,8 +246,6 @@
 				A92BC33A17C9291E00A7016A /* ot-outage-icon@2x.png */,
 				A92BC33517C9287F00A7016A /* ot-settings-icon.png */,
 				A92BC33617C9287F00A7016A /* ot-settings-icon@2x.png */,
-				A93D2A4E17B81E1A00B23A2E /* ot-icon-retina.png */,
-				A93D2A4F17B81E1A00B23A2E /* ot-icon.png */,
 				A93D2A4417B81DC900B23A2E /* ot-bill-example.png */,
 			);
 			name = images;
@@ -591,8 +597,8 @@
 			files = (
 				A9F5D223179B36590018FB60 /* InfoPlist.strings in Resources */,
 				A93D2A4817B81DC900B23A2E /* ot-bill-example.png in Resources */,
-				A93D2A5117B81E1A00B23A2E /* ot-icon-retina.png in Resources */,
-				A93D2A5217B81E1A00B23A2E /* ot-icon.png in Resources */,
+				A91BDF361810C7F900F4907D /* ot-icon-80.png in Resources */,
+				A91BDF371810C7F900F4907D /* ot-icon-120.png in Resources */,
 				A92BC33717C9287F00A7016A /* ot-settings-icon.png in Resources */,
 				A92BC33817C9287F00A7016A /* ot-settings-icon@2x.png in Resources */,
 				A92BC33B17C9291F00A7016A /* ot-outage-icon.png in Resources */,
@@ -601,11 +607,13 @@
 				A92BC34017C92CE900A7016A /* ot-about-icon@2x.png in Resources */,
 				A92BC34317C9319300A7016A /* ot-feedback-icon.png in Resources */,
 				A92BC34417C9319300A7016A /* ot-feedback-icon@2x.png in Resources */,
+				A91BDF3B1810C83B00F4907D /* Default@2x.png in Resources */,
+				A91BDF3F1810D9D100F4907D /* house-light-yes.jpg in Resources */,
+				A91BDF3A1810C83B00F4907D /* Default-568h@2x.png in Resources */,
 				A92BC34717C932D300A7016A /* ot-menu-icon.png in Resources */,
 				A92BC34817C932D300A7016A /* ot-menu-icon@2x.png in Resources */,
-				A9B019BD17CA35EE00E59515 /* Default-568h@2x.png in Resources */,
-				A9B019BF17CA369F00E59515 /* Default@2x.png in Resources */,
-				A9B019C117CA36D700E59515 /* Default.png in Resources */,
+				A91BDF351810C7F900F4907D /* ot-icon-58.png in Resources */,
+				A91BDF3E1810D9D100F4907D /* house-light-no.jpg in Resources */,
 				A9ABE81B17D5090200C33EA8 /* File.strings in Resources */,
 				A9ABE82017D5102500C33EA8 /* Localizable.strings in Resources */,
 				A9ABE85B17D51FEB00C33EA8 /* MainStoryboard.storyboard in Resources */,
