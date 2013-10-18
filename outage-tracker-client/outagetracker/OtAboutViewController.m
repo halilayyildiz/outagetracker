@@ -33,7 +33,7 @@
     [self.tableView addGestureRecognizer:tap];
     
     // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
     // load app version
     NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
@@ -46,8 +46,8 @@
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
     
     // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-    self.tableView.backgroundView = nil;
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.tableView.backgroundView = nil;
 }
 
 - (void)didReceiveMemoryWarning

@@ -16,15 +16,6 @@
 
 @implementation OtClaimDisturbanceViewCtrl
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,13 +27,13 @@
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
 
     // set texts
-    self.approveButton.titleLabel.text = AMLocalizedString(@"claimdisturbance.approve", @"Approve");
-    self.claimDisturbanceNotice.text = AMLocalizedString(@"claimdisturbance.notice", @"Yep, I have a disturbance");
+//    self.approveButton.titleLabel.text = AMLocalizedString(@"claimdisturbance.approve", @"Approve");
+//    self.claimDisturbanceNotice.text = AMLocalizedString(@"claimdisturbance.notice", @"Yep, I have a disturbance");
     
     // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-    self.approveButton.layer.cornerRadius = 4;
-    self.claimDisturbanceNotice.layer.cornerRadius = 4;
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.approveButton.layer.cornerRadius = 4;
+    self.claimDisturbanceNotice.layer.cornerRadius = 6;
     self.claimDisturbanceNotice.textAlignment = NSTextAlignmentCenter;
 }
 

@@ -18,8 +18,6 @@
 
 @implementation OtDetailViewCtrl
 
-#pragma mark - Managing the detail item
-
 - (void)setOutage:(id)newOutage
 {
     if (_outage != newOutage) {
@@ -68,7 +66,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

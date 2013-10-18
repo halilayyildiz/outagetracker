@@ -7,7 +7,7 @@
 //
 
 
-@interface OtClaimDisturbanceViewCtrl : UITableViewController
+@interface OtClaimDisturbanceViewCtrl : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *approveButton;
 @property (strong, nonatomic) IBOutlet UILabel *claimDisturbanceNotice;

@@ -118,8 +118,8 @@
 		A9ABE81A17D5090200C33EA8 /* File.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
 		A9ABE81C17D5095B00C33EA8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9ABE81D17D5095B00C33EA8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A9ABE82117D5102500C33EA8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = file; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A9ABE82317D5102A00C33EA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A9ABE82117D5102500C33EA8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A9ABE82317D5102A00C33EA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A9ABE82617D5112C00C33EA8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		A9ABE82717D5112C00C33EA8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		A9ABE82817D5112C00C33EA8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -412,14 +412,14 @@
 			isa = PBXGroup;
 			children = (
 				A9ABE85A17D51FEB00C33EA8 /* MainStoryboard.storyboard */,
+				A9F5D227179B36590018FB60 /* OtAppDelegate.h */,
+				A9F5D228179B36590018FB60 /* OtAppDelegate.m */,
 				A9B790B117B70E6E00197731 /* libs */,
 				A9FA1A2717ADAE33009F63D7 /* utils */,
 				A9F5D266179B68140018FB60 /* remote */,
 				A9F5D265179B629F0018FB60 /* controller */,
 				A9F5D264179B62970018FB60 /* view */,
 				A9F5D263179B628F0018FB60 /* model */,
-				A9F5D227179B36590018FB60 /* OtAppDelegate.h */,
-				A9F5D228179B36590018FB60 /* OtAppDelegate.m */,
 				A9F5D21F179B36590018FB60 /* Supporting Files */,
 			);
 			path = outagetracker;
@@ -558,6 +558,11 @@
 				CLASSPREFIX = Ot;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Halil AYYILDIZ";
+				TargetAttributes = {
+					A9F5D212179B36590018FB60 = {
+						DevelopmentTeam = VD35DD26UR;
+					};
+				};
 			};
 			buildConfigurationList = A9F5D20E179B36590018FB60 /* Build configuration list for PBXProject "outagetracker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -780,9 +785,11 @@
 		A9F5D255179B36590018FB60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Outages;
 				WRAPPER_EXTENSION = app;
 			};
@@ -791,9 +798,11 @@
 		A9F5D256179B36590018FB60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Outages;
 				WRAPPER_EXTENSION = app;
 			};

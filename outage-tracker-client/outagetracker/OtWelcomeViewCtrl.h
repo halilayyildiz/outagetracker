@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
-
-@interface OtWelcomeViewCtrl : UITableViewController <MBProgressHUDDelegate>
+@interface OtWelcomeViewCtrl : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *installationIdTextField;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;

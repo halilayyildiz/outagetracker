@@ -8,7 +8,6 @@
 
 #import "OtAppDelegate.h"
 #import "MFSideMenuContainerViewController.h"
-#import "OtMasterViewCtrl.h"
 
 @implementation OtAppDelegate
 
@@ -39,11 +38,13 @@
     // load language
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *lang = [defaults valueForKey:OT_LANG];
-    if (lang == nil) {
+    if (lang == nil)
+    {
         [defaults setObject:@"English" forKey:OT_LANG];
         [defaults synchronize];
-        LocalizationSetLanguage([OtUtils getLangCode:@"English"]);
-    }else
+        LocalizationSetLanguage([OtUtils getLangCode:@"Turkish"]);
+    }
+    else
     {
         LocalizationSetLanguage([OtUtils getLangCode:lang]);
     }
@@ -51,7 +52,7 @@
     
     // set root controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
-    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMainNavigationCtrl"];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"OtMasterNavigationCtrl"];
     UIViewController *sideMenuViewCtrl = [storyboard instantiateViewControllerWithIdentifier:@"OtSideMenuViewCtrl"];
     
     self.container = [MFSideMenuContainerViewController containerWithCenterViewController:navigationController

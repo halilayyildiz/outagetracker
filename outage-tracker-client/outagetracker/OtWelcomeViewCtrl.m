@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import "MBProgressHUD.h"
 #import "OtAppDelegate.h"
 #import "OtWelcomeViewCtrl.h"
 #import "OtOutageClient.h"
@@ -43,14 +44,14 @@
     appDelegate.container.panMode = MFSideMenuPanModeNone;
     
     // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     self.billImage.layer.cornerRadius = 4.0f;
-    self.installationIdTextField.layer.cornerRadius = 4.0f;
-    self.registerButton.layer.cornerRadius = 4.0f;
+//    self.installationIdTextField.layer.cornerRadius = 4.0f;
+//    self.registerButton.layer.cornerRadius = 4.0f;
     
-    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
-    self.installationIdTextField.leftView = paddingView;
-    self.installationIdTextField.leftViewMode = UITextFieldViewModeAlways;
+//    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+//    self.installationIdTextField.leftView = paddingView;
+//    self.installationIdTextField.leftViewMode = UITextFieldViewModeAlways;
     
     //    [self.registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 }

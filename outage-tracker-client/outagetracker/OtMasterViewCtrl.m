@@ -54,6 +54,9 @@
 {
     OtAppDelegate *appDelegate = (OtAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeDefault;
+    
+//    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(NAV_BAR_TINT_COLOR)];
 }
 
 - (void)didReceiveMemoryWarning

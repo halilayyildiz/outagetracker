@@ -35,8 +35,8 @@
     appDelegate.container.panMode = MFSideMenuPanModeNone;
     
     // set styles
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
-    self.tableView.backgroundView = nil;
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.tableView.backgroundView = nil;
     
     // load user settings
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

@@ -46,7 +46,7 @@
     onCompleteSend(newOutageList);
 }
 
-- (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete;
+- (void) registerWithInstallationId:(NSString *)installationId notify:(void (^)(NSString *userId))onComplete
 {
     //TODO
     

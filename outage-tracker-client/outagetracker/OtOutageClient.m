@@ -12,7 +12,7 @@
 
 @interface OtOutageClient()
 
--(NSMutableArray *)parseOutage:(NSArray *)outagesJSON;
+- (NSMutableArray *)parseOutage:(NSArray *)outagesJSON;
 - (NSString *)parseUserId:(NSDictionary *)userJSON;
 - (NSString *)getDeviceToken;
 
