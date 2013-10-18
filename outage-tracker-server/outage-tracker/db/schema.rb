@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810224340) do
+ActiveRecord::Schema.define(version: 20131018192928) do
 
   create_table "outage", force: true do |t|
     t.string   "outage_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20130810224340) do
     t.integer  "affected_customers"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "lat"
+    t.float    "long"
   end
 
   create_table "user", force: true do |t|

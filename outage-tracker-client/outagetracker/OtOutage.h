@@ -16,6 +16,8 @@
 @property (nonatomic, copy) NSDate *endDate;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, assign) NSInteger numOfAffectedCustomers;
+@property (nonatomic) float latitude;
+@property (nonatomic) float longitude;
 
 -(id) initWithDesc:(NSString *) desc location:(NSString *) location startDate:(NSDate *)startDate endDate:(NSDate *)endDate address:(NSString *)addresss;
 

@@ -47,6 +47,7 @@
         self.durationLabel.text = [OtUtils durationBetweenDate:theOutage.startDate andDate:theOutage.endDate];
         self.numOfAffCustomers.text = [NSString stringWithFormat:@"%d", theOutage.numOfAffectedCustomers];
         self.locationLabel.text = theOutage.location;
+        [self prepareMapView:theOutage];
     }
 }
 
@@ -67,5 +68,23 @@
 {
     [super didReceiveMemoryWarning];
 }
+
+- (void)prepareMapView:(OtOutage *)theOutage
+{
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = theOutage.latitude;
+    zoomLocation.longitude= theOutage.longitude;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(zoomLocation, 4000, 4000);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+    // Add an annotation
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = zoomLocation;
+    point.title = @"Arıza Noktası";
+    
+    [self.mapView addAnnotation:point];
+}
+
 
 @end

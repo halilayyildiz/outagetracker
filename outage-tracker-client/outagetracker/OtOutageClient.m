@@ -87,6 +87,8 @@
         [outage setEndDate:[OtUtils parseDateTime:outageJson[@"end_date"]]];
         [outage setNumOfAffectedCustomers:[outageJson[@"affected_customers"] intValue]];
         [outage setDescription:outageJson[@"description"]];
+        [outage setLatitude:[outageJson[@"lat"] floatValue]];
+        [outage setLongitude:[outageJson[@"long"] floatValue]];
         
         [result addObject:outage];
     }

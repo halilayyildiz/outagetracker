@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 @class OtOutage;
 
 @interface OtDetailViewCtrl : UITableViewController
@@ -18,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numOfAffCustomers;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

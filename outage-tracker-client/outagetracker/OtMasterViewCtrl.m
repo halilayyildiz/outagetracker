@@ -114,8 +114,12 @@
 
 - (void)refreshViewData
 {
+    self.view.userInteractionEnabled = NO;
+    [self.refreshControl beginRefreshing];
     [self.dataController reloadOutagesAndNotify:^{
         [self updateTable];
+        self.view.userInteractionEnabled = YES;
+        [self.refreshControl endRefreshing];
     }];
 }
 
