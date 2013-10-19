@@ -166,7 +166,7 @@
 		A9CC329B1811E77600257C1E /* OtAlertViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtAlertViewDelegate.m; sourceTree = "<group>"; };
 		A9D817F617B6A4CF00D34EFE /* OtWelcomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtWelcomeViewCtrl.h; sourceTree = "<group>"; };
 		A9D817F717B6A4CF00D34EFE /* OtWelcomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtWelcomeViewCtrl.m; sourceTree = "<group>"; };
-		A9F5D213179B36590018FB60 /* Outages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F5D213179B36590018FB60 /* SIEMENS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIEMENS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5D216179B36590018FB60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9F5D218179B36590018FB60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9F5D21A179B36590018FB60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -398,7 +398,7 @@
 		A9F5D214179B36590018FB60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9F5D213179B36590018FB60 /* Outages.app */,
+				A9F5D213179B36590018FB60 /* SIEMENS.app */,
 				A9F5D241179B36590018FB60 /* outagetrackerTests.octest */,
 			);
 			name = Products;
@@ -542,7 +542,7 @@
 			);
 			name = outagetracker;
 			productName = outagetracker;
-			productReference = A9F5D213179B36590018FB60 /* Outages.app */;
+			productReference = A9F5D213179B36590018FB60 /* SIEMENS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A9F5D240179B36590018FB60 /* outagetrackerTests */ = {
@@ -808,7 +808,7 @@
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = Outages;
+				PRODUCT_NAME = SIEMENS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -821,7 +821,7 @@
 				GCC_PREFIX_HEADER = "outagetracker/outagetracker-Prefix.pch";
 				INFOPLIST_FILE = "outagetracker/outagetracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = Outages;
+				PRODUCT_NAME = SIEMENS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
