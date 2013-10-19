@@ -1,0 +1,4 @@
+http://halilayyildiz.com:8080/outagetracker/api/outage/new?outageId=28&location=Ankara%20ODTU&aff_cust=230&desc=ODTU%20Elektrik%20Kesintisi&sdate=2013-08-10%2013:00:00&edate=2013-08-10%2015:00:00&affectedCustomers=345345,345345,35756,5686111,12223,664488&lat=39.9718&long=32.6486
+
+http://www.halilayyildiz.com:8080/outagetracker/outages
+
