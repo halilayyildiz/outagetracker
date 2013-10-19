@@ -12,7 +12,7 @@ class Api::OutageController < ApplicationController
 
     user_inst_id = params[:inst_id]
 
-    puts 'INFO : transmitting new trouble call request to OMS server'
+    puts '[INFO] : transmitting new trouble call request to OMS server'
 
     require 'net/http'
 
@@ -22,11 +22,11 @@ class Api::OutageController < ApplicationController
       http.request(req)
     }
 
-    puts 'INFO : response from OMS server'
+    puts '[INFO] : response from OMS server'
     puts res.body
 
 
-    puts 'INFO : complete new trouble call'
+    puts '[INFO] : complete new trouble call'
     render json: 'accepted new tcall from user ->' + user_inst_id, status: :accepted
   end
 
@@ -55,6 +55,7 @@ class Api::OutageController < ApplicationController
     users = User.where('installation_id IN (?)', oms_affected_customers)
     users.each { |user|
       send_push_message(user.push_id)
+      puts '[INFO] : notification sent to user -> ' + user.installation_id
     }
 
     render json: 'OK', status: :accepted
