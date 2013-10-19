@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#define API_HTTP_PREFIX                     @"http://"
 #ifdef DEBUG
-#define SERVER_HOSTNAME                     @"192.168.1.64"
-#define SERVER_PORT                         @"3000"
+#define SERVER_HOSTNAME                     @"halilayyildiz.com"
+#define SERVER_PORT                         @"8080"
 #else
 #define SERVER_HOSTNAME                     @"halilayyildiz.com"
-#define SERVER_PORT                         @"3000"
+#define SERVER_PORT                         @"8080"
 #endif
 
-#define API_HTTP_PREFIX                     @"http://"
-#define API_ALL_OUTAGES_PATH                @"/api/outage/all"
-#define API_NEW_TCALL_PATH                  @"/api/outage/tcall"
+#define API_ALL_OUTAGES_PATH                @"/outagetracker/api/outage/all"
+#define API_NEW_TCALL_PATH                  @"/outagetracker/api/outage/tcall"
 #define API_NEW_TCALL_PARAM_INST            @"inst_id"
-#define API_REGISTER_USER_PATH              @"/api/user/register"
+#define API_REGISTER_USER_PATH              @"/outagetracker/api/user/register"
 #define API_REGISTER_USER_PARAM_INST        @"inst_id"
 #define API_REGISTER_USER_PARAM_PUSH        @"push_id"
 
