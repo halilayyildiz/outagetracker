@@ -1043,6 +1043,9 @@
         <image name="ot-bill-example.png" width="590" height="550"/>
         <image name="ot-feedback-icon.png" width="24" height="24"/>
         <image name="ot-menu-icon.png" width="22" height="17"/>
+        <image name="ot-menu-icon.png" width="22" height="17"/>
+        <image name="ot-menu-icon.png" width="22" height="17"/>
+        <image name="ot-menu-icon.png" width="22" height="17"/>
         <image name="ot-outage-icon.png" width="24" height="24"/>
         <image name="ot-settings-icon.png" width="24" height="24"/>
     </resources>

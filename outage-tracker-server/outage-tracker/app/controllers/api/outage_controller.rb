@@ -30,7 +30,7 @@ class Api::OutageController < ApplicationController
     render json: 'accepted new tcall from user ->' + user_inst_id, status: :accepted
   end
 
-  def new
+  def create_or_update
     oms_outage_id = params[:outageId]
     oms_outage_desc = params[:desc]
     oms_outage_start_date = params[:sdate]
@@ -41,17 +41,29 @@ class Api::OutageController < ApplicationController
     oms_outage_long = params[:long]
     oms_affected_customers = params[:affectedCustomers].split(',')
 
-    outage = Outage.new(outage_id:oms_outage_id, description:oms_outage_desc, start_date:oms_outage_start_date,
-                        end_date:oms_outage_end_date, location:oms_outage_location, affected_customers:oms_outage_aff_cust_count,
-                        lat:oms_outage_lat, long:oms_outage_long)
+    # save or update outage
+    outage = Outage.where('outage_id = ?', oms_outage_id).first
+    if(!outage)
+      outage = Outage.new(outage_id:oms_outage_id)
+    end
+
+    outage.description = oms_outage_desc
+    outage.start_date = oms_outage_start_date
+    outage.end_date = oms_outage_end_date
+    outage.location = oms_outage_location
+    outage.affected_customers = oms_outage_aff_cust_count
+    outage.lat = oms_outage_lat
+    outage.long = oms_outage_long
+
     outage.save
 
+    # save affected customers
     oms_affected_customers.each { |val|
       aff_cust = AffectedCustomer.new(outage_id:oms_outage_id, inst_id:val);
       aff_cust.save
     }
 
-    #send push notifications
+    # send push notifications
     users = User.where('installation_id IN (?)', oms_affected_customers)
     users.each { |user|
       send_push_message(user.push_id)
