@@ -6,7 +6,7 @@ module UsersHelper
     APNS.pem = 'app/assets/outagetracker_apns_production.pem'
     APNS.pass = '1insan'
 
-    APNS.send_notification(device_token, alert: 'Elektriginiz kesildi', badge: 1, sound: 'default')
+    APNS.send_notification(device_token, alert: 'Elektiriginiz kesildi', badge: 1, sound: 'default')
 
   end
 
