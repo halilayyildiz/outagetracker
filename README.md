@@ -36,7 +36,7 @@ Screenshots
 
 <p align="left">
   <span>
-    <img src="https://raw.github.com/halilayyildiz/outagetracker/master/screenshots/welcome.png" height="355" width="200"/>
+    <img src="https://raw.github.com/halilayyildiz/outagetracker/master/screenshots/welcome.png" height="355" width="200" border="5"/>
   <span/>
   <span>
     <img src="https://raw.github.com/halilayyildiz/outagetracker/master/screenshots/outages.png" height="355" width="200"/>
