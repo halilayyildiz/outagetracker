@@ -8,8 +8,8 @@
 
 #define API_HTTP_PREFIX                     @"http://"
 #ifdef DEBUG
-#define SERVER_HOSTNAME                     @"halilayyildiz.com"
-#define SERVER_PORT                         @"8080"
+#define SERVER_HOSTNAME                     @"localhost"
+#define SERVER_PORT                         @"3000"
 #else
 #define SERVER_HOSTNAME                     @"halilayyildiz.com"
 #define SERVER_PORT                         @"8080"
